@@ -213,7 +213,9 @@ body {
     cursor: pointer;
 }
 
-.hero__button--read-more {
+.hero__button--read-more,
+.projects__button,
+.projects__description__button {
     cursor: pointer;
     display: block;
     margin: 2rem auto 0 auto;
@@ -223,7 +225,9 @@ body {
     background: var(--background-dark-transparent);
 }
 
-.hero__button__button-text {
+.hero__button__button-text,
+.projects__button__button-text,
+.projects__description__button-text {
     font-family: var(--font-highlights);
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -236,18 +240,93 @@ body {
     background-clip: text;
 }
 
-.hero__button--read-more:hover {
+.hero__button--read-more:hover,
+.projects__button:hover,
+.projects__description__button:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     background: var(--background-darker-transparent);
 }
 
 /* SECTION Projects */
 
-.projects__header {
+.projects__header,
+.blog-posts__header {
     height: 18.75rem;
     width: 100%;
+    margin: 3rem auto -5rem auto;
     background-color: var(--color-lighter-grey);
 }
+
+.projects__header__big-header-text-container,
+.blog-posts__header__big-header-text-container {
+    /* max-width: 80vw; */
+    max-width: 90rem;
+    margin: auto;
+}
+
+.projects__header__big-header-text,
+.blog-posts__header__big-header-text {
+    position: relative;
+    top: 1.5rem;
+    text-align: right;
+    color: var(--color-light);
+    font-family: var(--font-highlights);
+    text-transform: uppercase;
+    font-size: 19rem;
+}
+
+.projects__article-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 80vw; */
+    max-width: 90rem;
+    margin: auto;
+}
+
+.projects__pagination-placeholder {
+    width: 6rem;
+}
+
+.projects__highlight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40rem;
+}
+
+.projects__highlight__buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.projects__highlight__horizontal-line {
+    margin: 3rem 5rem;
+    border: 1px dashed var(--background-dark-transparent);
+}
+
+.projects__description__title,
+.projects__highlight__technologies__title {
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: var(--font-highlights);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    background: var(--gradient-linear);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.projects__description {
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+/* SECTION Blog posts */
 
 /* SECTION Animations */
 
