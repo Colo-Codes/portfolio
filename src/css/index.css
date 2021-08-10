@@ -14,6 +14,8 @@
     --color-medium-grey: #6c6c6c;
     --color-accent: #b21f1f;
 
+    --transparency-light: rgba(255, 255, 255, 0.5);
+
     --gradient-linear: linear-gradient(
         to top right,
         #1a2a6c 0%,
@@ -190,7 +192,9 @@ body {
 
 /* SECTION Buttons */
 
-.hero__button {
+.hero__button,
+.about__highlight__button {
+    cursor: pointer;
     display: block;
     margin: 2rem auto 0 auto;
     font-family: var(--font-highlights);
@@ -205,12 +209,16 @@ body {
     transition: all 0.2s ease-in;
 }
 
-.hero__button:hover {
+.hero__button:hover,
+.about__highlight__button:hover {
     box-shadow: inset 0 -4em 0 0 var(--background-light-transparent);
     text-shadow: 0 0 2px black;
-    margin: 1.8rem auto 0 auto;
-    padding: 1.2rem 3.2rem;
-    cursor: pointer;
+    /* margin: 1.8rem auto 0 auto; */
+    /* padding: 1.2rem 3.2rem; */
+}
+
+.about__highlight__button {
+    width: 20rem;
 }
 
 .hero__button--read-more,
@@ -279,7 +287,8 @@ body {
 /* SECTION Projects */
 
 .projects__header,
-.blog-posts__header {
+.blog-posts__header,
+.about__header {
     height: 18.75rem;
     width: 100%;
     margin: 3rem auto -5rem auto;
@@ -287,25 +296,30 @@ body {
 }
 
 .projects__header__big-header-text-container,
-.blog-posts__header__big-header-text-container {
+.blog-posts__header__big-header-text-container,
+.about__header__big-header-text-container {
     /* max-width: 80vw; */
     max-width: 90rem;
     margin: auto;
 }
 
 .projects__header__big-header-text,
-.blog-posts__header__big-header-text {
+.blog-posts__header__big-header-text,
+.about__header__big-header-text {
     position: relative;
     top: 1.5rem;
     text-align: right;
-    color: var(--color-light);
+    /* color: var(--color-light); */
+    color: var(--transparency-light);
     font-family: var(--font-highlights);
     text-transform: uppercase;
     font-size: 19rem;
+    letter-spacing: 0.1em;
 }
 
 .projects__article-container,
-.blog-posts__container {
+.blog-posts__container,
+.about__article-container {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -337,7 +351,8 @@ body {
 }
 
 .projects__description__title,
-.projects__highlight__technologies__title {
+.projects__highlight__technologies__title,
+.about__detail__title {
     margin: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -483,6 +498,102 @@ body {
 
 .blog-posts__footer-article-snippet {
     margin-left: 5rem;
+}
+
+/* SECTION About */
+
+.about__article-container__background {
+    position: relative;
+    top: 5rem;
+    background: var(--gradient-linear);
+}
+
+.about__highlight__container {
+    margin-top: -5.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+.about__article-container {
+    top: -5rem;
+}
+
+.about__highlight__picture {
+    width: 21.25rem;
+    height: 21.25rem;
+    background-color: var(--color-lighter-grey);
+    border-radius: 50%;
+}
+
+.about__highlight__picture__frame1 {
+    width: 20rem;
+    height: 20rem;
+    background: var(--gradient-linear);
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 0.625rem;
+}
+
+.about__highlight__picture__frame2 {
+    width: 19.875rem;
+    height: 19.875rem;
+    background-color: var(--color-lighter-grey);
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 0.03125rem;
+}
+
+.about__highlight__picture__image {
+    width: 18.75rem;
+    height: 18.75rem;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 0.625rem;
+}
+
+.about__detail__description-container {
+    margin-top: 4rem;
+    padding: 1rem;
+    border-radius: 5px;
+    color: var(--color-light);
+    background-color: var(--background-darker-transparent);
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+.about__detail__heading {
+    display: block;
+}
+.about .article p {
+    color: var(--color-light);
+}
+
+.about .article p:first-child {
+    margin-top: 0;
+}
+
+.about__highlight-dividing-line {
+    width: 100%;
+    border: 1px dashed var(--background-light-transparent);
+    margin: 2rem auto;
+}
+
+.about__highlight__technologies__title {
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: var(--font-highlights);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--color-light);
 }
 
 /* SECTION Animations */
