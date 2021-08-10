@@ -32,25 +32,23 @@
                 <header class="hero__header">
                     <div class="hero__name">Damian Demasi</div>
                     <div class="hero__main-text">Web Developer</div>
-                    <button class="hero__button">work@damiandemasi.com</button>
+                    <button class="button-light">work@damiandemasi.com</button>
                 </header>
             </section>
-            <section class="hero__latest">
-                <article class="hero__latest__project">
-                    <h2 class="hero__article-header">Featured Project</h2>
-                    <h3 class="hero__article-header__title">
+            <section class="hero__featured">
+                <article class="hero__featured__project">
+                    <h2 class="article__header">Featured Project</h2>
+                    <h3 class="article__header__title">
                         This is a long title of a project to see how long titles
                         behave on the screen
                     </h3>
-                    <div class="hero__article-snippet article">
+                    <div class="article--dark">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Placeat voluptas recusandae at repudiandae
                             molestiae eius delectus fuga nobis tempora quaerat.
                         </p>
-                        <h4 class="article__h4">
-                            Voluptatem explicabo nostrum mollitia
-                        </h4>
+                        <h2>Voluptatem explicabo nostrum mollitia</h2>
                         <p>
                             Ipsam numquam voluptatem quam ipsum! Voluptate
                             sapiente, voluptas accusamus itaque iste fugit porro
@@ -65,17 +63,19 @@
                             quae recusandae?
                         </p>
                     </div>
-                    <button class="hero__button--read-more">
-                        <span class="hero__button__button-text">Read more</span>
+                    <button class="section__body__button">
+                        <span class="section__body__button__text"
+                            >Read more</span
+                        >
                     </button>
                 </article>
-                <div class="hero__article-dividing-line"></div>
-                <article class="hero__latest__blog-post">
-                    <h2 class="hero__article-header">Featured Blog Post</h2>
-                    <h3 class="hero__article-header__title">
+                <div class="dividing-line--vertical--dark"></div>
+                <article class="hero__featured__blog-post">
+                    <h2 class="article__header">Featured Blog Post</h2>
+                    <h3 class="article__header__title">
                         Perferendis, quia natus aperiam consequuntur
                     </h3>
-                    <div class="hero__article-snippet article">
+                    <div class="article--dark">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Placeat voluptas recusandae at repudiandae
@@ -86,10 +86,10 @@
                             aperiam consequuntur eum aliquid similique? Totam
                             suscipit tenetur fugiat quae recusandae?
                         </p>
-                        <h4 class="article__h4">
+                        <h2>
                             Cupiditate at magni quidem ratione in temporibus qui
                             sed consequatur vitae!
-                        </h4>
+                        </h2>
                         <p>
                             Ipsam numquam voluptatem quam ipsum! Voluptate
                             sapiente, voluptas accusamus itaque iste fugit porro
@@ -99,41 +99,43 @@
                             ipsum quae totam enim.
                         </p>
                     </div>
-                    <button class="hero__button--read-more">
-                        <span class="hero__button__button-text">Read more</span>
+                    <button class="section__body__button">
+                        <span class="section__body__button__text"
+                            >Read more</span
+                        >
                     </button>
                 </article>
             </section>
         </section>
-        <section class="projects">
-            <div class="projects__header">
-                <div class="projects__header__big-header-text-container">
-                    <h2 class="projects__header__big-header-text">Project</h2>
+        <section class="section projects">
+            <div class="section__header">
+                <div class="section__header__text-container">
+                    <h2 class="section__header__text-container__text">
+                        Project
+                    </h2>
                 </div>
             </div>
-            <article class="projects__article-container">
-                <div class="projects__highlight">
+            <article class="section__body-container">
+                <div class="section__body__highlight">
                     <img
                         src="./src/img/video-placeholder-600x300.png"
                         alt="Video of project"
                     />
-                    <div class="projects__highlight__buttons">
-                        <button class="projects__button">
-                            <span class="projects__button__button-text"
+                    <div class="section__body__highlight__buttons">
+                        <button class="section__body__button">
+                            <span class="section__body__button__text"
                                 >GitHub Repository</span
                             >
                         </button>
-                        <button class="projects__button">
-                            <span class="projects__button__button-text"
+                        <button class="section__body__button">
+                            <span class="section__body__button__text"
                                 >See it live</span
                             >
                         </button>
                     </div>
-                    <div class="projects__highlight__horizontal-line"></div>
-                    <div class="projects__highlight__technologies article">
-                        <h3 class="projects__highlight__technologies__title">
-                            Technologies
-                        </h3>
+                    <div class="dividing-line--horizontal--dark"></div>
+                    <div class="article--dark">
+                        <h3 class="article__title--dark">Technologies</h3>
                         <p>
                             Consectetur adipiscing elit. Maecenas euismod, velit
                             ac consequat maximus, erat lacus tincidunt magna, et
@@ -147,11 +149,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="projects__description article">
-                    <h3 class="projects__description__title">
-                        COVID-19 Dashboard
-                    </h3>
-                    <h4>Lorem ipsum dolor sit amet</h4>
+                <div class="section__body__description article--dark">
+                    <h3 class="article__title--dark">COVID-19 Dashboard</h3>
+                    <h2>Lorem ipsum dolor sit amet</h2>
                     <p>
                         Consectetur adipiscing elit. Maecenas euismod, velit ac
                         consequat maximus, erat lacus tincidunt magna, et
@@ -173,7 +173,7 @@
                         lectus.
                     </p>
 
-                    <h4>Curabitur eget risus vitae ante consequat commodo</h4>
+                    <h2>Curabitur eget risus vitae ante consequat commodo</h2>
                     <p>
                         Aliquam at faucibus leo, suscipit ultricies metus.
                         Vivamus congue non nunc nec lacinia. In sed sollicitudin
@@ -187,41 +187,41 @@
                         eleifend tellus. Ut congue purus sit amet metus
                         sollicitudin, et fermentum leo imperdiet.
                     </p>
-                    <button class="projects__description__button">
-                        <span class="projects__description__button-text"
+                    <button class="section__body__button">
+                        <span class="section__body__button__text"
                             >Read more</span
                         >
                     </button>
                 </div>
             </article>
-            <div class="projects__header">
-                <div class="projects__header__big-header-text-container">
-                    <h2 class="projects__header__big-header-text">Project</h2>
+            <div class="section__header">
+                <div class="section__header__text-container">
+                    <h2 class="section__header__text-container__text">
+                        Project
+                    </h2>
                 </div>
             </div>
-            <article class="projects__article-container">
-                <div class="projects__highlight">
+            <article class="section__body-container">
+                <div class="section__body__highlight">
                     <img
                         src="./src/img/video-placeholder-600x300.png"
                         alt="Video of project"
                     />
-                    <div class="projects__highlight__buttons">
-                        <button class="projects__button">
-                            <span class="projects__button__button-text"
+                    <div class="section__body__highlight__buttons">
+                        <button class="section__body__button">
+                            <span class="section__body__button__text"
                                 >GitHub Repository</span
                             >
                         </button>
-                        <button class="projects__button">
-                            <span class="projects__button__button-text"
+                        <button class="section__body__button">
+                            <span class="section__body__button__text"
                                 >See it live</span
                             >
                         </button>
                     </div>
-                    <div class="projects__highlight__horizontal-line"></div>
-                    <div class="projects__highlight__technologies article">
-                        <h3 class="projects__highlight__technologies__title">
-                            Technologies
-                        </h3>
+                    <div class="dividing-line--horizontal--dark"></div>
+                    <div class="article--dark">
+                        <h3 class="article__title--dark">Technologies</h3>
                         <p>
                             Consectetur adipiscing elit. Maecenas euismod, velit
                             ac consequat maximus, erat lacus tincidunt magna, et
@@ -235,9 +235,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="projects__description article">
-                    <h3 class="projects__description__title">To-Do app</h3>
-                    <h4>Lorem ipsum dolor sit amet</h4>
+                <div class="section__body__description article--dark">
+                    <h3 class="article__title--dark">To-Do app</h3>
+                    <h2>Lorem ipsum dolor sit amet</h2>
                     <p>
                         Consectetur adipiscing elit. Maecenas euismod, velit ac
                         consequat maximus, erat lacus tincidunt magna, et
@@ -259,7 +259,7 @@
                         lectus.
                     </p>
 
-                    <h4>Curabitur eget risus vitae ante consequat commodo</h4>
+                    <h2>Curabitur eget risus vitae ante consequat commodo</h2>
                     <p>
                         Aliquam at faucibus leo, suscipit ultricies metus.
                         Vivamus congue non nunc nec lacinia. In sed sollicitudin
@@ -273,246 +273,192 @@
                         eleifend tellus. Ut congue purus sit amet metus
                         sollicitudin, et fermentum leo imperdiet.
                     </p>
-                    <button class="projects__description__button">
-                        <span class="projects__description__button-text"
+                    <button class="section__body__button">
+                        <span class="section__body__button__text"
                             >Read more</span
                         >
                     </button>
                 </div>
             </article>
         </section>
-        <section class="blog-posts">
-            <div class="blog-posts__header">
-                <div class="blog-posts__header__big-header-text-container">
-                    <h2 class="blog-posts__header__big-header-text">
+        <section class="section blog-posts">
+            <div class="section__header">
+                <div class="section__header__text-container">
+                    <h2 class="section__header__text-container__text">
                         Blog posts
                     </h2>
                 </div>
             </div>
-            <div class="blog-posts__container">
-                <div class="blog-posts__nav-arrow">
-                    <img src="./src/img/white-arrow.png" alt="Left" />
-                </div>
-                <div class="blog-posts__body">
-                    <article class="blog-posts__body__post">
-                        <header class="blog-posts__body__post__header">
-                            MVC and the Publish and Subscription desing pattern
-                        </header>
-                        <div class="blog-posts__body__post__article article">
-                            <p>
-                                Consectetur adipiscing elit. Maecenas euismod,
-                                velit ac consequat maximus, erat lacus tincidunt
-                                magna, et laoreet felis magna sed urna.
-                                Vestibulum sed vestibulum libero, bibendum
-                                accumsan nisi. Duis mattis felis vitae
-                                pellentesque ultricies. Phasellus elementum
-                                feugiat metus vel fermentum. Aenean vitae nisl
-                                vel metus tincidunt rutrum. Nunc egestas, quam
-                                vitae porttitor lacinia, nisi purus pharetra
-                                ipsum, cursus iaculis neque massa vel.
-                            </p>
-                        </div>
-                        <div class="blog-posts__body__post__read-it-on">
-                            <p
-                                class="
-                                    blog-posts__body__post__read-it-on__title
-                                "
-                            >
-                                Read it on
-                            </p>
-                            <div
-                                class="
-                                    blog-posts__body__post__buttons-container
-                                "
-                            >
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Dev.to</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Hashnode</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Medium</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Blog</span
-                                    >
-                                </button>
+            <div class="section__body-container--vertical">
+                <div class="section__body__card-container">
+                    <div class="card__nav">
+                        <img src="./src/img/white-arrow.png" alt="Left" />
+                    </div>
+                    <div class="card-group">
+                        <article class="card">
+                            <header class="card__header">
+                                <h2 class="card__header__title">
+                                    MVC and the Publish and Subscription desing
+                                    pattern
+                                </h2>
+                            </header>
+                            <div class="card__body">
+                                <p>
+                                    Consectetur adipiscing elit. Maecenas
+                                    euismod, velit ac consequat maximus, erat
+                                    lacus tincidunt magna, et laoreet felis
+                                    magna sed urna. Vestibulum sed vestibulum
+                                    libero, bibendum accumsan nisi. Duis mattis
+                                    felis vitae pellentesque ultricies.
+                                    Phasellus elementum feugiat metus vel
+                                    fermentum. Aenean vitae nisl vel metus
+                                    tincidunt rutrum. Nunc egestas, quam vitae
+                                    porttitor lacinia, nisi purus pharetra
+                                    ipsum, cursus iaculis neque massa vel.
+                                </p>
                             </div>
-                        </div>
-                    </article>
-                    <article class="blog-posts__body__post">
-                        <header class="blog-posts__body__post__header">
-                            MVC and the Publish and Subscription desing pattern
-                        </header>
-                        <div class="blog-posts__body__post__article article">
-                            <p>
-                                Consectetur adipiscing elit. Maecenas euismod,
-                                velit ac consequat maximus, erat lacus tincidunt
-                                magna, et laoreet felis magna sed urna.
-                                Vestibulum sed vestibulum libero, bibendum
-                                accumsan nisi. Duis mattis felis vitae
-                                pellentesque ultricies. Phasellus elementum
-                                feugiat metus vel fermentum. Aenean vitae nisl
-                                vel metus tincidunt rutrum. Nunc egestas, quam
-                                vitae porttitor lacinia, nisi purus pharetra
-                                ipsum, cursus iaculis neque massa vel.
-                            </p>
-                        </div>
-                        <div class="blog-posts__body__post__read-it-on">
-                            <p
-                                class="
-                                    blog-posts__body__post__read-it-on__title
-                                "
-                            >
-                                Read it on
-                            </p>
-                            <div
-                                class="
-                                    blog-posts__body__post__buttons-container
-                                "
-                            >
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Dev.to</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Hashnode</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Medium</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Blog</span
-                                    >
-                                </button>
+                            <div class="card__footer">
+                                <p class="card__footer__title">Read it on</p>
+                                <div class="card__footer__buttons-container">
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Dev.to</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Hashnode</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Medium</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Blog</span
+                                        >
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                    <article class="blog-posts__body__post">
-                        <header class="blog-posts__body__post__header">
-                            MVC and the Publish and Subscription desing pattern
-                        </header>
-                        <div class="blog-posts__body__post__article article">
-                            <p>
-                                Consectetur adipiscing elit. Maecenas euismod,
-                                velit ac consequat maximus, erat lacus tincidunt
-                                magna, et laoreet felis magna sed urna.
-                                Vestibulum sed vestibulum libero, bibendum
-                                accumsan nisi. Duis mattis felis vitae
-                                pellentesque ultricies. Phasellus elementum
-                                feugiat metus vel fermentum. Aenean vitae nisl
-                                vel metus tincidunt rutrum. Nunc egestas, quam
-                                vitae porttitor lacinia, nisi purus pharetra
-                                ipsum, cursus iaculis neque massa vel.
-                            </p>
-                        </div>
-                        <div class="blog-posts__body__post__read-it-on">
-                            <p
-                                class="
-                                    blog-posts__body__post__read-it-on__title
-                                "
-                            >
-                                Read it on
-                            </p>
-                            <div
-                                class="
-                                    blog-posts__body__post__buttons-container
-                                "
-                            >
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Dev.to</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Hashnode</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Medium</span
-                                    >
-                                </button>
-                                <button class="blog-posts__body__post__button">
-                                    <span
-                                        class="
-                                            blog-posts__body__post__button-text
-                                        "
-                                        >Blog</span
-                                    >
-                                </button>
+                        </article>
+                        <article class="card">
+                            <header class="card__header">
+                                <h2 class="card__header__title">
+                                    MVC and the Publish and Subscription desing
+                                    pattern
+                                </h2>
+                            </header>
+                            <div class="card__body">
+                                <p>
+                                    Consectetur adipiscing elit. Maecenas
+                                    euismod, velit ac consequat maximus, erat
+                                    lacus tincidunt magna, et laoreet felis
+                                    magna sed urna. Vestibulum sed vestibulum
+                                    libero, bibendum accumsan nisi. Duis mattis
+                                    felis vitae pellentesque ultricies.
+                                    Phasellus elementum feugiat metus vel
+                                    fermentum. Aenean vitae nisl vel metus
+                                    tincidunt rutrum. Nunc egestas, quam vitae
+                                    porttitor lacinia, nisi purus pharetra
+                                    ipsum, cursus iaculis neque massa vel.
+                                </p>
                             </div>
-                        </div>
-                    </article>
+                            <div class="card__footer">
+                                <p class="card__footer__title">Read it on</p>
+                                <div class="card__footer__buttons-container">
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Dev.to</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Hashnode</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Medium</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Blog</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <header class="card__header">
+                                <h2 class="card__header__title">
+                                    MVC and the Publish and Subscription desing
+                                    pattern
+                                </h2>
+                            </header>
+                            <div class="card__body">
+                                <p>
+                                    Consectetur adipiscing elit. Maecenas
+                                    euismod, velit ac consequat maximus, erat
+                                    lacus tincidunt magna, et laoreet felis
+                                    magna sed urna. Vestibulum sed vestibulum
+                                    libero, bibendum accumsan nisi. Duis mattis
+                                    felis vitae pellentesque ultricies.
+                                    Phasellus elementum feugiat metus vel
+                                    fermentum. Aenean vitae nisl vel metus
+                                    tincidunt rutrum. Nunc egestas, quam vitae
+                                    porttitor lacinia, nisi purus pharetra
+                                    ipsum, cursus iaculis neque massa vel.
+                                </p>
+                            </div>
+                            <div class="card__footer">
+                                <p class="card__footer__title">Read it on</p>
+                                <div class="card__footer__buttons-container">
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Dev.to</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Hashnode</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Medium</span
+                                        >
+                                    </button>
+                                    <button class="card__footer__button">
+                                        <span class="card__footer__button__text"
+                                            >Blog</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="card__nav">
+                        <img src="./src/img/white-arrow.png" alt="Right" />
+                    </div>
                 </div>
-                <div class="blog-posts__nav-arrow">
-                    <img src="./src/img/white-arrow.png" alt="Right" />
-                </div>
-            </div>
 
-            <div class="blog-posts__dividing-line"></div>
-            <article class="blog-posts__footer-article">
-                <h2 class="blog-posts__footer-article-header">Why to blog?</h2>
-                <h3 class="blog-posts__footer-article-header__title">
-                    The best way to learn is to teach
-                </h3>
-                <div class="blog-posts__footer-article-snippet article">
+                <div class="dividing-line--horizontal--dark"></div>
+                <article class="section__body__description article--dark">
+                    <div class="move-left">
+                        <h2 class="article__header">Why to blog?</h2>
+                        <h3 class="article__header__title">
+                            The best way to learn is to teach
+                        </h3>
+                    </div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Placeat voluptas recusandae at repudiandae molestiae
                         eius delectus fuga nobis tempora quaerat.
                     </p>
-                    <h4 class="article__h4">
-                        Voluptatem explicabo nostrum mollitia
-                    </h4>
+                    <h2>Voluptatem explicabo nostrum mollitia</h2>
                     <p>
                         Ipsam numquam voluptatem quam ipsum! Voluptate sapiente,
                         voluptas accusamus itaque iste fugit porro cupiditate at
@@ -525,46 +471,52 @@
                         eum aliquid similique? Totam suscipit tenetur fugiat
                         quae recusandae?
                     </p>
-                </div>
-            </article>
+                </article>
+            </div>
         </section>
-        <section class="about">
-            <div class="about__header">
-                <div class="about__header__big-header-text-container">
-                    <h2 class="about__header__big-header-text">About</h2>
+        <section class="section about">
+            <div class="section__header">
+                <div class="section__header__text-container">
+                    <h2 class="section__header__text-container__text">About</h2>
                 </div>
             </div>
-            <div class="about__article-container__background">
-                <article class="about__article-container">
-                    <section class="about__highlight__container">
-                        <div class="about__highlight__picture">
-                            <div class="about__highlight__picture__frame1">
-                                <div class="about__highlight__picture__frame2">
+            <div class="section__body__background">
+                <article class="section__body-container move-up-top">
+                    <section class="section__body__highlight move-up-margin">
+                        <div class="section__body__highlight__picture">
+                            <div
+                                class="
+                                    section__body__highlight__picture__frame1
+                                "
+                            >
+                                <div
+                                    class="
+                                        section__body__highlight__picture__frame2
+                                    "
+                                >
                                     <img
-                                        class="about__highlight__picture__image"
+                                        class="
+                                            section__body__highlight__picture__image
+                                        "
                                         src="./src/img/profile-picture.jpeg"
                                         alt="Damian Demasi wearing a hat on a sunny day, standing in a park."
                                     />
                                 </div>
                             </div>
                         </div>
-                        <div class="about__highlight__buttons">
-                            <button class="about__highlight__button">
-                                <span class="about__highlight__button-text"
-                                    >Get my resume</span
-                                >
-                            </button>
-                            <button class="about__highlight__button">
-                                <span class="about__highlight__button-text"
-                                    >Contact me on LinkedIn</span
-                                >
-                            </button>
-                        </div>
-                        <div class="about__highlight-dividing-line"></div>
-                        <div class="about__highlight__technologies article">
-                            <h3 class="about__highlight__technologies__title">
-                                My tech stack
-                            </h3>
+                        <button class="button-light">
+                            <span class="button-light__text"
+                                >Get my resume</span
+                            >
+                        </button>
+                        <button class="button-light">
+                            <span class="button-light__text"
+                                >Contact me on LinkedIn</span
+                            >
+                        </button>
+                        <div class="dividing-line--horizontal--light"></div>
+                        <div class="article--light">
+                            <h3 class="article__title--light">My tech stack</h3>
                             <p>
                                 Consectetur adipiscing elit. Maecenas euismod,
                                 velit ac consequat maximus, erat lacus tincidunt
@@ -579,11 +531,9 @@
                             </p>
                         </div>
                     </section>
-                    <section class="about__detail">
-                        <h3 class="about__detail__title">Damian Demasi</h3>
-                        <div
-                            class="about__detail__description-container article"
-                        >
+                    <section class="section__body__description">
+                        <h3 class="article__title--dark">Damian Demasi</h3>
+                        <div class="dark-container article--light">
                             <p>
                                 Consectetur adipiscing elit. Maecenas euismod,
                                 velit ac consequat maximus, erat lacus tincidunt
@@ -602,9 +552,7 @@
                                 iaculis nulla ac magna feugiat, et ultricies mi
                                 gravida.
                             </p>
-                            <h4 class="about__detail__heading article">
-                                Consectetur adipiscing elit
-                            </h4>
+                            <h2>Consectetur adipiscing elit</h2>
                             <p>
                                 Maecenas euismod, velit ac consequat maximus,
                                 erat lacus tincidunt magna, et laoreet felis
@@ -632,13 +580,13 @@
                     </section>
                 </article>
             </div>
-            <div class="about__reviews__header">
-                <h2 class="about__reviews__header__title">
+            <div class="section__header__sub-header">
+                <h2 class="article__title--dark move-down">
                     What my coworkers have to say about me
                 </h2>
             </div>
-            <div class="about__reviews__container">
-                <article class="card">
+            <div class="card-group">
+                <article class="card move-up-margin">
                     <header class="card__header">
                         <img
                             src="./src/img/cesar-villagra.png"
@@ -671,12 +619,12 @@
                     </div>
 
                     <button class="card__button">
-                        <span class="card__button-text"
+                        <span class="card__button__text"
                             >Read it on LinkedIn</span
                         >
                     </button>
                 </article>
-                <article class="card">
+                <article class="card move-up-margin">
                     <header class="card__header">
                         <img
                             src="./src/img/exequiel-barrirero.png"
@@ -709,12 +657,12 @@
                     </div>
 
                     <button class="card__button">
-                        <span class="card__button-text"
+                        <span class="card__button__text"
                             >Read it on LinkedIn</span
                         >
                     </button>
                 </article>
-                <article class="card">
+                <article class="card move-up-margin">
                     <header class="card__header">
                         <img
                             src="./src/img/adrian-dzienisik.png"
@@ -749,7 +697,7 @@
                     </div>
 
                     <button class="card__button">
-                        <span class="card__button-text"
+                        <span class="card__button__text"
                             >Read it on LinkedIn</span
                         >
                     </button>
