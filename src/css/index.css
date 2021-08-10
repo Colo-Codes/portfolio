@@ -365,8 +365,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-width: 25rem;
-    max-width: 40rem;
+    /* min-width: 25rem;
+    max-width: 40rem; */
+    width: 40rem;
 }
 
 .section__body__highlight__buttons {
@@ -421,6 +422,31 @@ body {
     margin: auto;
     position: relative;
     top: 0.625rem;
+}
+
+.section__body__highlight__buttons-round-container-light {
+    /* width: 21.875rem;
+    height: 21.875rem; */
+    width: 27rem;
+    height: 27rem;
+    border-radius: 50%;
+    background-color: var(--color-light);
+}
+
+.section__body__highlight__buttons-round-container-dark {
+    /* width: 20.625rem;
+    height: 20.625rem; */
+    width: 26rem;
+    height: 26rem;
+    border-radius: 50%;
+    background: var(--gradient-linear);
+    margin: auto;
+    padding: 5rem 0 7rem 0;
+    position: relative;
+    top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 /* SECTION Cards */
@@ -531,6 +557,29 @@ body {
     color: var(--color-medium-grey);
 }
 
+/* SECTION Form */
+
+.form__input,
+.form__textarea {
+    font-family: var(--font-normal);
+    font-size: 1rem;
+    background: var(--background-dark-transparent);
+    background-image: var(--gradient-linear);
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% + 2px), 0 0;
+    background-size: 100% 2px;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 2px solid red;
+    border-color: transparent;
+    border-radius: 5px 5px 0 0;
+    color: black;
+    line-height: 1.5;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
 /* SECTION Tweaks and decoration */
 
 .dark-container {
@@ -572,6 +621,11 @@ body {
 
 .dividing-line--horizontal--light {
     border: 1px dashed var(--background-light-transparent);
+}
+
+.contact .big-icon {
+    font-size: 3rem;
+    text-align: center;
 }
 
 /* SECTION Animations */
