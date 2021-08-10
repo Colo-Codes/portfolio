@@ -223,19 +223,22 @@ body {
 
 .hero__button--read-more,
 .projects__button,
-.projects__description__button {
+.projects__description__button,
+.card__button {
     cursor: pointer;
     display: block;
-    margin: 2rem auto 0 auto;
+    margin: 2rem auto 2rem auto;
     padding: 1rem 3rem;
     border: 1px solid var(--background-dark-transparent-border);
     border-radius: 5px;
     background: var(--background-dark-transparent);
+    transition: 0.2s all;
 }
 
 .hero__button__button-text,
 .projects__button__button-text,
-.projects__description__button-text {
+.projects__description__button-text,
+.card__button-text {
     font-family: var(--font-highlights);
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -250,9 +253,11 @@ body {
 
 .hero__button--read-more:hover,
 .projects__button:hover,
-.projects__description__button:hover {
+.projects__description__button:hover,
+.card__button:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     background: var(--background-darker-transparent);
+    transform: translateY(-5px);
 }
 
 .blog-posts__body__post__button {
@@ -352,7 +357,8 @@ body {
 
 .projects__description__title,
 .projects__highlight__technologies__title,
-.about__detail__title {
+.about__detail__title,
+.about__reviews__header__title {
     margin: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -372,9 +378,6 @@ body {
 }
 
 /* SECTION Blog posts */
-
-.blog-posts__container {
-}
 
 .blog-posts__nav-arrow:first-child {
     background-color: #dbdbdb;
@@ -413,9 +416,10 @@ body {
     justify-content: space-evenly;
 }
 
-.blog-posts__body__post {
+.blog-posts__body__post,
+.card {
     width: 18rem;
-    height: 32rem;
+    /* height: 32rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -517,7 +521,8 @@ body {
     max-width: 40rem;
 }
 
-.about__article-container {
+.about__article-container,
+.about__reviews__container {
     top: -5rem;
 }
 
@@ -594,6 +599,63 @@ body {
     font-size: 3.5rem;
     text-transform: uppercase;
     color: var(--color-light);
+}
+
+/* Reviews mini-section */
+
+.about__reviews__header {
+    height: 18.75rem;
+    width: 100%;
+    margin-top: 5rem;
+    background-color: var(--color-lighter-grey);
+    overflow: hidden; /* Prevent margins from collapsing */
+}
+
+.about__reviews__header__title {
+    display: block;
+    margin-top: 5rem;
+}
+
+.about__reviews__container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 90rem;
+    margin: auto;
+}
+
+.card__header {
+    background: var(--gradient-linear);
+    border-radius: 5px 5px 0 0;
+    padding: 1rem;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__header__image {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-right: 1rem;
+}
+
+.card__header__name {
+    color: var(--color-light);
+    font-size: 1rem;
+    /* font-weight: 700; */
+}
+
+.card__header__job-title {
+    color: var(--transparency-light);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.card__body {
+    padding: 1rem;
+    color: var(--color-medium-grey);
 }
 
 /* SECTION Animations */
