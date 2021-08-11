@@ -102,7 +102,6 @@ body {
     transition: all 0.2s ease-in;
 }
 
-
 .hero__nav__link:focus,
 .hero__nav__link:hover {
     border: 1px solid var(--color-light);
@@ -116,7 +115,7 @@ body {
     border: 1px solid var(--color-light);
     box-shadow: none;
     text-shadow: none;
-    transform: translateY(0px)
+    transform: translateY(0px);
 }
 
 /* SECTION Hero - Header */
@@ -251,7 +250,8 @@ body {
 .button-light {
     width: 20rem;
     cursor: pointer;
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 2rem auto 0 auto;
     font-family: var(--font-highlights);
     font-size: 1rem;
@@ -269,22 +269,37 @@ body {
 .button-light:focus {
     border: 1px solid var(--color-light);
     box-shadow: inset 0 -4em 0 0 var(--background-light-transparent),
-    0 4px 0 0 var(--color-accent), 0 8px 8px 0 rgba(255, 255, 255, 0.4);
+        0 4px 0 0 var(--color-accent), 0 8px 8px 0 rgba(255, 255, 255, 0.4);
     text-shadow: 2px 2px var(--color-accent);
     transform: translateY(-3px);
+}
+
+.button-light:hover .icon-button-light,
+.button-light:focus .icon-button-light {
+    -webkit-filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(294deg)
+        brightness(109%) contrast(101%) drop-shadow(2px 2px var(--color-accent));
+    filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(294deg)
+        brightness(109%) contrast(101%) drop-shadow(2px 2px var(--color-accent));
 }
 
 .button-light:active {
     border: 1px solid var(--color-light);
     box-shadow: none;
     text-shadow: none;
-    transform: translateY(0px)
+    transform: translateY(0px);
+}
+
+.button-light:active .icon-button-light {
+    -webkit-filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(294deg)
+        brightness(109%) contrast(101%);
+    filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(294deg)
+        brightness(109%) contrast(101%);
 }
 
 .section__body__button,
 .card__button {
     cursor: pointer;
-    display: block;
+    display: flex;
     margin: 2rem auto 2rem auto;
     padding: 1rem 3rem;
     border: 1px solid var(--background-dark-transparent-border);
@@ -311,7 +326,6 @@ body {
 .section__body__button:focus,
 .card__button:focus,
 .card__button:hover {
-    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); */
     box-shadow: 0 4px 0 0 var(--color-accent), 0 6px 6px 0 rgba(0, 0, 0, 0.5);
     background: var(--background-darker-transparent);
     transform: translateY(-3px);
@@ -349,8 +363,15 @@ body {
 }
 
 .card__footer__button:hover {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 0 0 var(--color-accent), 0 6px 6px 0 rgba(0, 0, 0, 0.5);
     background: var(--background-darker-transparent);
+    transform: translateY(-3px);
+}
+
+.card__footer__button:active {
+    box-shadow: none;
+    background: var(--background-darker-transparent);
+    transform: translateY(0px);
 }
 
 /* SECTION Main headers */
@@ -421,8 +442,9 @@ body {
 }
 
 .section__body__highlight__buttons {
+    width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .section__body__description {
@@ -714,6 +736,7 @@ body {
 }
 
 .footer__content__contact {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -734,6 +757,51 @@ body {
 .footer__content__signature__highlight {
     font-weight: 700;
     display: block;
+}
+
+.footer__resources {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    text-align: right;
+    color: var(--color-lighter-grey);
+    font-size: 0.8rem;
+}
+
+.footer__resources a,
+.footer__resources a:link,
+.footer__resources a:visited {
+    color: var(--color-lighter-grey);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-lighter-grey);
+}
+
+.footer__resources a:hover,
+.footer__resources a:focus {
+    border-bottom: 1px dotted var(--color-light);
+    color: var(--color-light);
+}
+
+/* SECTION Icons */
+
+.icon-button-dark {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0.05rem 0.5rem 0 0;
+    -webkit-filter: invert(19%) sepia(26%) saturate(1879%) hue-rotate(285deg)
+        brightness(93%) contrast(93%);
+    filter: invert(19%) sepia(26%) saturate(1879%) hue-rotate(285deg)
+        brightness(93%) contrast(93%);
+}
+
+.icon-button-light {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: -0.1rem 0.5rem 0 0;
+    -webkit-filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(294deg)
+        brightness(109%) contrast(101%);
+    filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(294deg)
+        brightness(109%) contrast(101%);
 }
 
 /* SECTION Animations */
@@ -827,5 +895,4 @@ body {
             0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
             0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
     }
-}
 }
