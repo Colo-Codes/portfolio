@@ -23,6 +23,7 @@
         #fdbb2d 100%
     );
 
+    --background-lighter-transparent: rgba(255, 255, 255, 0.05);
     --background-light-transparent: rgba(255, 255, 255, 0.3);
     --background-darker-transparent: rgba(0, 0, 0, 0.1);
     --background-dark-transparent: rgba(0, 0, 0, 0.05);
@@ -83,7 +84,9 @@ body {
 }
 
 .hero__nav__logo,
-.hero__nav__link {
+.hero__,
+.footer__content__nav__link,
+.footer__content__logo {
     margin: 0 2rem;
     font-family: var(--font-highlights);
     font-size: var(--font-size-nav);
@@ -626,6 +629,64 @@ body {
 .contact .big-icon {
     font-size: 3rem;
     text-align: center;
+}
+
+/* SECTION Footer */
+
+.footer__background {
+    width: 100%;
+    height: 20rem;
+    background: var(--gradient-linear);
+    overflow: hidden;
+    position: relative;
+}
+
+.footer__background-text {
+    font-family: var(--font-highlights);
+    color: var(--background-lighter-transparent);
+    font-size: 31rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: -7rem auto 0 -35.3rem;
+}
+
+.footer__content__container {
+    width: 90%;
+    max-width: 70rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer__content__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer__content__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__content__logos-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: -2rem;
+}
+
+.footer__content__signature {
+    color: var(--color-light);
+    margin-bottom: -10rem;
+    text-align: right;
+}
+
+.footer__content__signature__highlight {
+    font-weight: 700;
+    display: block;
 }
 
 /* SECTION Animations */
