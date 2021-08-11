@@ -12,7 +12,7 @@
     --color-lighter-grey: #e4e4e4;
     --color-light-grey: #7a7a7a;
     --color-medium-grey: #6c6c6c;
-    --color-accent: #b21f1f;
+    --color-accent: #b62820;
 
     --transparency-light: rgba(255, 255, 255, 0.5);
 
@@ -84,13 +84,39 @@ body {
 }
 
 .hero__nav__logo,
-.hero__,
+.hero__nav__link,
+.hero__nav__link:link,
+.hero__nav__link:visited,
 .footer__content__nav__link,
 .footer__content__logo {
+    display: block; /* To make transform work */
     margin: 0 2rem;
+    letter-spacing: 0.05em;
     font-family: var(--font-highlights);
     font-size: var(--font-size-nav);
     color: var(--color-light);
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: all 0.2s ease-in;
+}
+
+
+.hero__nav__link:focus,
+.hero__nav__link:hover {
+    border: 1px solid var(--color-light);
+    box-shadow: inset 0 -4em 0 0 var(--background-light-transparent),
+        0 4px 0 0 var(--color-accent), 0 8px 8px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 2px 2px var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.hero__nav__link:active {
+    border: 1px solid var(--color-light);
+    box-shadow: none;
+    text-shadow: none;
+    transform: translateY(0px)
 }
 
 /* SECTION Hero - Header */
@@ -239,9 +265,20 @@ body {
     transition: all 0.2s ease-in;
 }
 
-.button-light:hover {
-    box-shadow: inset 0 -4em 0 0 var(--background-light-transparent);
-    text-shadow: 0 0 2px black;
+.button-light:hover,
+.button-light:focus {
+    border: 1px solid var(--color-light);
+    box-shadow: inset 0 -4em 0 0 var(--background-light-transparent),
+    0 4px 0 0 var(--color-accent), 0 8px 8px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 2px 2px var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.button-light:active {
+    border: 1px solid var(--color-light);
+    box-shadow: none;
+    text-shadow: none;
+    transform: translateY(0px)
 }
 
 .section__body__button,
@@ -271,10 +308,20 @@ body {
 }
 
 .section__body__button:hover,
+.section__body__button:focus,
+.card__button:focus,
 .card__button:hover {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 4px 0 0 var(--color-accent), 0 6px 6px 0 rgba(0, 0, 0, 0.5);
     background: var(--background-darker-transparent);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+}
+
+.section__body__button:active,
+.card__button:active {
+    box-shadow: none;
+    background: var(--background-darker-transparent);
+    transform: translateY(0px);
 }
 
 .card__footer__button {
@@ -780,4 +827,5 @@ body {
             0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
             0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
     }
+}
 }
