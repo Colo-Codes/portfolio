@@ -23,6 +23,7 @@
         #fdbb2d 100%
     );
 
+    --background-light-transparent-low: rgba(255, 255, 255, 0.5);
     --background-light-transparent: rgba(255, 255, 255, 0.3);
     --background-light-medium-transparent: rgba(255, 255, 255, 0.15);
     --background-lighter-transparent: rgba(255, 255, 255, 0.05);
@@ -298,6 +299,7 @@ body {
     font-family: var(--font-highlights);
     font-size: 1rem;
     letter-spacing: 0.2em;
+    text-decoration: none;
     color: var(--color-light);
     background: none;
     border: 1px solid;
@@ -342,6 +344,7 @@ body {
 .card__button {
     cursor: pointer;
     display: flex;
+    text-decoration: none;
     margin: 2rem auto 2rem auto;
     padding: 1rem 3rem;
     border: 1px solid var(--background-dark-transparent-border);
@@ -380,15 +383,23 @@ body {
     transform: translateY(0px);
 }
 
-.card__footer__button {
+.card__footer__button,
+.card__footer__button--light {
     cursor: pointer;
     display: block;
     /* margin: 2rem auto 0 auto; */
     padding: 0.2rem;
     border: 1px solid var(--background-dark-transparent-border);
     border-radius: 5px;
-    background: var(--background-dark-transparent);
     transition: 0.2s all;
+}
+
+.card__footer__button {
+    background: var(--background-dark-transparent);
+}
+
+.card__footer__button--light {
+    background: var(--color-light);
 }
 
 .card__footer__button__text {
@@ -404,19 +415,65 @@ body {
     background-clip: text;
 }
 
+.card__footer__button--light:focus,
+.card__footer__button--light:hover,
+.card__footer__button:focus,
 .card__footer__button:hover {
     box-shadow: 0 4px 0 0 var(--color-accent), 0 6px 6px 0 rgba(0, 0, 0, 0.5);
-    background: var(--background-darker-transparent);
     transform: translateY(-3px);
 }
 
-.card__footer__button:active {
+.card__footer__button--light:focus,
+.card__footer__button--light:hover {
+    background: var(--color-light);
+}
+
+.card__footer__button:focus,
+.card__footer__button:hover {
+    background: var(--background-darker-transparent);
+}
+
+.card__footer__button:active,
+.card__footer__button--light:active {
     box-shadow: none;
     background: var(--background-darker-transparent);
     transform: translateY(0px);
 }
 
 /* SECTION Main headers */
+
+.projects__nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 5rem;
+    margin: 0 0 -3rem 0;
+    border-top: 2px solid var(--color-accent);
+    background-color: var(--background-darker-transparent);
+    /* box-shadow: 0 5px 5px 0 var(--background-darker-transparent); */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.projects__nav__container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.projects__nav__container__project {
+    margin: 0 2rem;
+}
+
+.projects__nav__container__project a {
+    text-decoration: none;
+}
 
 .section__header,
 .section__header__sub-header {
