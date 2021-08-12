@@ -1,9 +1,6 @@
 /* 
-    By Damian Demasi
-    August 2021
+    By Damian Demasi, August 2021
 */
-
-/* SECTION Imports */
 
 /* SECTION Custom properties (variables) */
 
@@ -20,6 +17,11 @@
         to top right,
         #1a2a6c 0%,
         #b21f1f 50%,
+        #fdbb2d 100%
+    );
+    --gradient-linear-2steps: linear-gradient(
+        to top right,
+        #b21f1f 0%,
         #fdbb2d 100%
     );
 
@@ -67,91 +69,6 @@ body {
     min-height: 31.875rem; /* 512 px */
     width: 100%;
     background: var(--gradient-linear);
-}
-
-/* SECTION Hero - Navbar */
-
-.hero__nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 90rem;
-    margin: auto;
-}
-
-.hero__nav__logos-container,
-.hero__nav__links-container {
-    display: flex;
-    /* flex-wrap: wrap; */
-    margin-top: 2rem;
-}
-
-.nav__logo {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.2rem;
-    margin: 0 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.1s ease-in;
-    border-radius: 50%;
-    border: 1px solid transparent;
-}
-
-.nav__logo img {
-    display: block;
-    margin: auto;
-}
-
-.nav__logo:focus,
-.nav__logo:hover {
-    background-color: var(--background-light-medium-transparent);
-    -webkit-filter: drop-shadow(2px 2px var(--color-accent));
-    filter: drop-shadow(3px 3px 0 var(--color-accent));
-    transform: scale(1.2);
-    border: 1px solid var(--color-light);
-    box-shadow: 0 0 8px 0 var(--color-light);
-}
-
-.nav__logo:active {
-    background-color: var(--background-light-medium-transparent);
-    transform: scale(1);
-    border: 1px solid var(--color-light);
-    box-shadow: none;
-}
-
-.nav__link,
-.nav__link:link,
-.nav__link:visited,
-.footer__content__nav__link,
-.footer__content__logo {
-    display: block; /* To make transform work */
-    margin: 0 2rem;
-    letter-spacing: 0.05em;
-    font-family: var(--font-highlights);
-    font-size: var(--font-size-nav);
-    color: var(--color-light);
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    padding: 0.5rem;
-    transition: all 0.2s ease-in;
-}
-
-.nav__link:focus,
-.nav__link:hover {
-    border: 1px solid var(--color-light);
-    box-shadow: inset 0 -4em 0 0 var(--background-light-transparent),
-        0 4px 0 0 var(--color-accent), 0 8px 8px 0 rgba(255, 255, 255, 0.4);
-    text-shadow: 2px 2px var(--color-accent);
-    transform: translateY(-3px);
-}
-
-.nav__link:active {
-    border: 1px solid var(--color-light);
-    box-shadow: none;
-    text-shadow: none;
-    transform: translateY(0px);
 }
 
 /* SECTION Hero - Header */
@@ -209,6 +126,170 @@ body {
 .hero__featured__project,
 .hero__featured__blog-post {
     width: 25rem;
+}
+
+/* SECTION Nav bars */
+
+.nav {
+    max-width: 90rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.sticky-nav {
+    position: -webkit-sticky;
+    position: absolute -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--color-accent);
+    /* background: var(--gradient-linear-2steps); */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 5px 5px 0 var(--background-darker-transparent); */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease-in;
+}
+
+.nav__logos-container,
+.nav__links-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin-top: 2rem; */
+}
+
+.nav__logo,
+.sticky-nav__logo {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.2rem;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.nav__logo img,
+.sticky-nav__logo img {
+    display: block;
+    margin: auto;
+}
+
+.nav__logo:focus,
+.nav__logo:hover {
+    background-color: var(--background-light-medium-transparent);
+    transform: scale(1.2);
+    border: 1px solid var(--color-light);
+}
+
+.sticky-nav__logo:focus,
+.sticky-nav__logo:hover {
+    transform: scale(1.2);
+}
+
+.nav__logo:active {
+    background-color: var(--background-light-medium-transparent);
+    transform: scale(1);
+    border: 1px solid var(--color-light);
+    box-shadow: none;
+}
+
+.nav__link,
+.nav__link:link,
+.nav__link:visited,
+.sticky-nav__link,
+.sticky-nav__link:link,
+.sticky-nav__link:visited,
+.footer__content__nav__link,
+.footer__content__logo {
+    display: block; /* To make transform work */
+    margin: 0 2rem;
+    letter-spacing: 0.05em;
+    font-family: var(--font-highlights);
+    font-size: var(--font-size-nav);
+    color: var(--color-light);
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+}
+
+.nav__link,
+.nav__link:link,
+.nav__link:visited,
+.footer__content__nav__link,
+.footer__content__logo {
+    padding: 0.5rem;
+}
+
+.sticky-nav__link,
+.sticky-nav__link:link,
+.sticky-nav__link:visited {
+    padding: 0 0.2rem;
+}
+
+.nav__link:focus,
+.nav__link:hover,
+.sticky-nav__link:focus,
+.sticky-nav__link:hover {
+    border: 1px solid var(--color-light);
+    box-shadow: inset 0 -4em 0 0 var(--background-light-transparent),
+        0 4px 0 0 var(--color-accent), 0 8px 8px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 2px 2px var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.nav__link:active,
+.sticky-nav__link:active,
+/* The following selector is needed for JavaScript */
+.sticky-nav__link.sticky-nav__link--active {
+    border: 1px solid var(--color-light);
+    box-shadow: none;
+    text-shadow: none;
+    transform: translateY(0px);
+}
+
+.projects__nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3rem;
+    z-index: 10;
+    width: 100%;
+    height: 3.5rem;
+    margin: 0 0 -3rem 0;
+    background-color: var(--background-darker-transparent);
+    /* box-shadow: 0 5px 5px 0 var(--background-darker-transparent); */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.projects__nav__container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.projects__nav__container__project {
+    margin: 0 2rem;
+}
+
+.projects__nav__container__project a {
+    text-decoration: none;
 }
 
 /* SECTION Articles */
@@ -441,39 +522,6 @@ body {
 }
 
 /* SECTION Main headers */
-
-.projects__nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    height: 5rem;
-    margin: 0 0 -3rem 0;
-    border-top: 2px solid var(--color-accent);
-    background-color: var(--background-darker-transparent);
-    /* box-shadow: 0 5px 5px 0 var(--background-darker-transparent); */
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-}
-
-.projects__nav__container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    margin: 0 auto;
-}
-
-.projects__nav__container__project {
-    margin: 0 2rem;
-}
-
-.projects__nav__container__project a {
-    text-decoration: none;
-}
 
 .section__header,
 .section__header__sub-header {
@@ -752,6 +800,13 @@ body {
 }
 
 /* SECTION Tweaks and decoration */
+
+.hidden {
+    position: relative;
+    opacity: 0;
+    margin-top: -3rem;
+    z-index: 0;
+}
 
 .dark-container {
     margin-top: 4rem;
