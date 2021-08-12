@@ -92,14 +92,13 @@ body {
     font-family: var(--font-highlights);
     margin: 2rem auto 0 auto;
     text-align: center;
-    font-size: 9rem;
+    font-size: 3rem;
     letter-spacing: 0.3em;
-    /* text-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); */
     transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
-        0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
-        0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-    /* animation: web-dev-pop-up 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; */
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 2px 0 #cccccc,
+        0 2px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 2px 0 #cccccc,
+        0 2px 0 #cccccc, 0 2px 0 #cccccc, 0 15px 10px rgba(0, 0, 0, 0.3);
+    animation: web-dev-pop-up 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     -webkit-animation: web-dev-pop-up 4s ease-in-out both;
     animation: web-dev-pop-up 4s ease-in-out both;
     -webkit-animation-delay: 1s;
@@ -118,6 +117,7 @@ body {
 
 .hero__featured {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 60rem;
     margin: 3rem auto 0 auto;
@@ -125,7 +125,9 @@ body {
 
 .hero__featured__project,
 .hero__featured__blog-post {
-    width: 25rem;
+    /* min-width: 15rem; */
+    max-width: 25rem;
+    margin: 0 2rem;
 }
 
 /* SECTION Nav bars */
@@ -134,6 +136,7 @@ body {
     max-width: 90rem;
     height: 6rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: auto;
@@ -162,6 +165,7 @@ body {
 .nav__logos-container,
 .nav__links-container {
     display: flex;
+    margin: 1rem auto;
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
 }
@@ -171,7 +175,7 @@ body {
     width: 3rem;
     height: 3rem;
     padding: 0.2rem;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,10 +218,10 @@ body {
 .footer__content__nav__link,
 .footer__content__logo {
     display: block; /* To make transform work */
-    margin: 0 2rem;
+    margin: 0 0.5rem;
     letter-spacing: 0.05em;
     font-family: var(--font-highlights);
-    font-size: var(--font-size-nav);
+    font-size: 1rem;
     color: var(--color-light);
     text-decoration: none;
     border: 1px solid transparent;
@@ -285,7 +289,7 @@ body {
 }
 
 .projects__nav__container__project {
-    margin: 0 2rem;
+    margin: 0 0.5rem;
 }
 
 .projects__nav__container__project a {
@@ -563,8 +567,8 @@ body {
 .section__body-container--vertical {
     position: relative;
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
-    /* max-width: 80vw; */
     max-width: 90rem;
     margin: auto;
 }
@@ -576,16 +580,20 @@ body {
 .section__body__card-container {
     display: flex;
     justify-content: space-between;
+    width: 90%; /* FIXME */
+    margin: auto; /* FIXME */
 }
 
 .section__body__highlight {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     /* min-width: 25rem;
     max-width: 40rem; */
     width: 40rem;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .section__body__highlight__buttons {
@@ -598,6 +606,7 @@ body {
     min-width: 25rem;
     max-width: 40rem;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .section__body__background {
@@ -650,6 +659,7 @@ body {
     height: 27rem;
     border-radius: 50%;
     background-color: var(--color-light);
+    margin-bottom: 2rem;
 }
 
 .section__body__highlight__buttons-round-container-dark {
@@ -679,6 +689,7 @@ body {
     border-radius: 5px;
     background: #ffffff;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
 }
 
 .card__nav:first-child {
@@ -714,8 +725,9 @@ body {
 
 .card-group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    min-width: 70rem;
+    /* min-width: 60rem; */
     max-width: 90rem;
     margin: 0 auto;
 }
@@ -823,7 +835,11 @@ body {
 }
 
 .move-up-margin {
-    margin-top: -5.625rem;
+    margin-top: 0rem;
+}
+
+.move-up-margin--photo {
+    margin-top: 2rem;
 }
 
 .move-down {
@@ -843,6 +859,7 @@ body {
 .dividing-line--horizontal--dark,
 .dividing-line--vertical--dark {
     border: 1px dashed var(--background-dark-transparent);
+    display: none;
 }
 
 .dividing-line--horizontal--light {
@@ -1043,3 +1060,71 @@ body {
             0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
     }
 } */
+
+/* SECTION Mobile first */
+
+@media (min-width: 750px) {
+    .hero__main-text {
+        font-size: 5rem;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 2px 0 #cccccc,
+            0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 3px 0 #cccccc, 0 5px 0 #cccccc,
+            0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 35px 20px rgba(0, 0, 0, 0.3);
+    }
+    .nav__link,
+    .nav__link:link,
+    .nav__link:visited,
+    .sticky-nav__link,
+    .sticky-nav__link:link,
+    .sticky-nav__link:visited,
+    .footer__content__nav__link,
+    .footer__content__logo {
+        display: block; /* To make transform work */
+        margin: 0 0.5rem;
+        letter-spacing: 0.05em;
+        font-family: var(--font-highlights);
+        font-size: var(--font-size-nav);
+        color: var(--color-light);
+        text-decoration: none;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        transition: all 0.2s ease-in;
+    }
+    .dividing-line--vertical--dark {
+        display: block;
+    }
+    .projects__nav__container__project {
+        margin: 0 2rem;
+    }
+    .move-up-margin {
+        margin-top: -5.625rem;
+    }
+}
+@media (min-width: 1100px) {
+    .hero__main-text {
+        font-size: 7rem;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
+            0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
+            0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+    .nav__link {
+        margin: 0 2rem;
+    }
+    .nav__logo {
+        margin: 0 1rem;
+    }
+    .section__body__highlight {
+        justify-content: space-between;
+    }
+    .card-group {
+        min-width: 70rem;
+    }
+    .move-up-margin--photo {
+        margin-top: -5.625rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero__main-text {
+        font-size: 9rem;
+    }
+}
