@@ -52,7 +52,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    outline: 1px dashed blue; /* Debugging purposes */
+    /* outline: 1px dashed blue; /* Debugging purposes */
 }
 
 /* SECTION Body */
@@ -704,7 +704,7 @@ body {
     border-radius: 5px;
     background: #ffffff;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
-    margin-bottom: 2rem;
+    margin: 0 1rem 2rem 1rem;
 }
 
 .card__nav:first-child {
@@ -1087,6 +1087,7 @@ body {
         width: 25rem;
     }
     .section__body__highlight__buttons-round-container-light {
+        width: 27rem;
         border-radius: 50%;
     }
     .section__body__highlight__buttons-round-container-dark {
@@ -1113,13 +1114,10 @@ body {
     .article__title--dark {
         font-size: 3.5rem;
     }
-    .section__header__sub-header {
-        margin: 5rem auto 0 auto;
-    }
 }
 @media (min-width: 650px) {
     .section__body__highlight__preview-gif {
-        width: 37.5rem;
+        width: 36rem;
     }
 }
 @media (min-width: 750px) {
@@ -1129,6 +1127,7 @@ body {
             0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 3px 0 #cccccc, 0 5px 0 #cccccc,
             0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 35px 20px rgba(0, 0, 0, 0.3);
     }
+
     .nav__link,
     .nav__link:link,
     .nav__link:visited,
@@ -1137,26 +1136,19 @@ body {
     .sticky-nav__link:visited,
     .footer__content__nav__link,
     .footer__content__logo {
-        display: block; /* To make transform work */
-        margin: 0 0.5rem;
-        letter-spacing: 0.05em;
-        font-family: var(--font-highlights);
         font-size: var(--font-size-nav);
-        color: var(--color-light);
-        text-decoration: none;
-        border: 1px solid transparent;
-        border-radius: 5px;
-        transition: all 0.2s ease-in;
     }
+
     .dividing-line--vertical--dark {
         display: block;
     }
     .projects__nav__container__project {
         margin: 0 2rem;
     }
-    .move-up-margin {
+    /* .move-up-margin {
         margin-top: -5.625rem;
-    }
+    } */
+
     .sticky-nav-reference {
         margin-top: -4rem;
     }
@@ -1184,13 +1176,20 @@ body {
         justify-content: space-between;
     }
     .card-group {
-        min-width: 70rem;
-    }
-    .move-up-margin--photo {
-        margin-top: -5.625rem;
+        /* min-width: 70rem; */
+        /* min-width: 100%; */
     }
     .move-left {
         margin-left: -5rem;
+    }
+    /* .section__header__sub-header {
+        margin: 5rem auto 0 auto;
+    } */
+}
+
+@media (min-width: 1285px) {
+    .move-up-margin--photo {
+        margin-top: -5.625rem;
     }
 }
 
