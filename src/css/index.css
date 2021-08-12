@@ -831,7 +831,7 @@ body {
 .hidden {
     position: relative;
     opacity: 0;
-    margin-top: -8rem;
+    /* margin-top: -8rem; */
     z-index: 0;
 }
 
