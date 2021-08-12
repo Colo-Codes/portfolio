@@ -28,7 +28,7 @@ const sectionHeroContainerObserver = new IntersectionObserver(function (entries)
 sectionHeroContainerObserver.observe(sectionHeroContainer);
 
 const sectionActiveObserver = new IntersectionObserver(function (entries) {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
         const intersectingClass = entry.target.classList[1];
         const linkToActivate = document.getElementById(`nav-${intersectingClass}`);
         if (entry.isIntersecting) {
