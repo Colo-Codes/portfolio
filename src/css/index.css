@@ -586,8 +586,8 @@ body {
 .section__body__card-container {
     display: flex;
     justify-content: space-between;
-    width: 90%; /* FIXME */
-    margin: auto; /* FIXME */
+    width: 90%;
+    margin: auto;
 }
 
 .section__body__highlight {
@@ -599,6 +599,7 @@ body {
     max-width: 40rem; */
     width: 100%;
     margin: 0 auto;
+    overflow: hidden; /* Due to circle of contact butons */
 }
 
 .section__body__highlight__preview-gif {
@@ -668,9 +669,10 @@ body {
     height: 21.875rem; */
     /* min-width: 17rem; */
     /* min-height: 17rem; */
-    /* width: 27rem; */
-    width: 100%;
+    /* width: 100%; */
+    width: 27rem;
     height: 27rem;
+    border-radius: 50%;
     background-color: var(--color-light);
     margin-bottom: 2rem;
 }
@@ -680,12 +682,13 @@ body {
     height: 20.625rem; */
     /* min-width: 16rem; */
     /* min-height: 16rem; */
-    /* width: 26rem; */
-    width: 100%;
+    /* width: 100%; */
+    width: 26rem;
     height: 26rem;
+    border-radius: 50%;
     background: var(--gradient-linear);
     margin: auto;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 5rem 0 7rem 0;
     position: relative;
     top: 0.5rem;
     display: flex;
@@ -704,7 +707,7 @@ body {
     border-radius: 5px;
     background: #ffffff;
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
-    margin: 0 1rem 2rem 1rem;
+    margin: 0 0 2rem 0;
 }
 
 .card__nav:first-child {
@@ -1086,14 +1089,12 @@ body {
     .section__body__highlight__preview-gif {
         width: 25rem;
     }
-    .section__body__highlight__buttons-round-container-light {
+    /* .section__body__highlight__buttons-round-container-light {
         width: 27rem;
-        border-radius: 50%;
     }
     .section__body__highlight__buttons-round-container-dark {
-        border-radius: 50%;
         padding: 5rem 0 7rem 0;
-    }
+    } */
     .section__body__highlight {
         padding: 0 2rem;
         width: 40rem;
@@ -1113,6 +1114,9 @@ body {
     .article__title--light,
     .article__title--dark {
         font-size: 3.5rem;
+    }
+    .card {
+        margin: 0 1rem 2rem 1rem;
     }
 }
 @media (min-width: 650px) {
