@@ -828,6 +828,10 @@ body {
 
 /* SECTION Tweaks and decoration */
 
+.sticky-nav-reference {
+    margin-top: -8rem;
+}
+
 .hidden {
     position: relative;
     opacity: 0;
