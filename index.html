@@ -22,11 +22,12 @@
             href="./src/img/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <!-- FIXME -->
         <link rel="stylesheet" href="./src/css/index.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bebas+Neue&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700;900&display=swap"
             rel="stylesheet"
         />
         <script defer src="./src/js/index.js"></script>
@@ -166,34 +167,40 @@
                     <div class="hero__name">Damian Demasi</div>
                     <div class="hero__main-text">Web Developer</div>
                     <a
-                        class="button-light"
+                        class="button-light--accent"
                         href="mailto:work@damiandemasi.com"
                         target="_blank"
                     >
-                        <img
-                            src="./src/img/icon-email.png"
-                            alt=""
-                            width="20"
-                            height="20"
-                            class="icon-button-light"
-                        /><span>work@damiandemasi.com</span>
+                        <div class="button-light">
+                            <img
+                                src="./src/img/icon-email.png"
+                                alt=""
+                                width="20"
+                                height="20"
+                                class="button-light__icon"
+                            /><span>work@damiandemasi.com</span>
+                        </div>
                     </a>
                 </header>
             </section>
             <section class="hero__featured">
-                <article class="hero__featured__project">
-                    <h2 class="article__header">Featured Project</h2>
-                    <h3 class="article__header__title">
-                        This is a long title of a project to see how long titles
-                        behave on the screen
-                    </h3>
-                    <div class="article--dark">
+                <article class="hero__featured__article">
+                    <header class="article__header">
+                        <div class="article__header__section">
+                            Featured Project
+                        </div>
+                        <h2 class="article__header__title">
+                            This is a long title of a project to see how long
+                            titles behave on the screen
+                        </h2>
+                    </header>
+                    <div class="article--text">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Placeat voluptas recusandae at repudiandae
                             molestiae eius delectus fuga nobis tempora quaerat.
                         </p>
-                        <h2>Voluptatem explicabo nostrum mollitia</h2>
+                        <h3>Voluptatem explicabo nostrum mollitia</h3>
                         <p>
                             Ipsam numquam voluptatem quam ipsum! Voluptate
                             sapiente, voluptas accusamus itaque iste fugit porro
@@ -208,25 +215,31 @@
                             quae recusandae?
                         </p>
                     </div>
-                    <button class="section__body__button">
-                        <img
-                            src="./src/img/icon-read-more.png"
-                            alt=""
-                            width="20"
-                            height="20"
-                            class="icon-button-dark"
-                        /><span class="section__body__button__text">
-                            Read more</span
-                        >
-                    </button>
+                    <a class="section__body__button--accent" href="#">
+                        <div class="section__body__button">
+                            <img
+                                src="./src/img/icon-read-more.png"
+                                alt=""
+                                width="20"
+                                height="20"
+                                class="button-dark__icon"
+                            /><span class="section__body__button__text">
+                                Read more</span
+                            >
+                        </div>
+                    </a>
                 </article>
                 <div class="dividing-line--vertical--dark"></div>
-                <article class="hero__featured__blog-post">
-                    <h2 class="article__header">Featured Blog Post</h2>
-                    <h3 class="article__header__title">
-                        Perferendis, quia natus aperiam consequuntur
-                    </h3>
-                    <div class="article--dark">
+                <article class="hero__featured__article">
+                    <header class="article__header">
+                        <div class="article__header__section">
+                            Featured Blog Post
+                        </div>
+                        <h2 class="article__header__title">
+                            Perferendis, quia natus aperiam consequuntur
+                        </h2>
+                    </header>
+                    <div class="article--text">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Placeat voluptas recusandae at repudiandae
@@ -237,10 +250,10 @@
                             aperiam consequuntur eum aliquid similique? Totam
                             suscipit tenetur fugiat quae recusandae?
                         </p>
-                        <h2>
+                        <h3>
                             Cupiditate at magni quidem ratione in temporibus qui
                             sed consequatur vitae!
-                        </h2>
+                        </h3>
                         <p>
                             Ipsam numquam voluptatem quam ipsum! Voluptate
                             sapiente, voluptas accusamus itaque iste fugit porro
@@ -250,59 +263,23 @@
                             ipsum quae totam enim.
                         </p>
                     </div>
-                    <button class="section__body__button">
-                        <img
-                            src="./src/img/icon-read-more.png"
-                            alt=""
-                            width="20"
-                            height="20"
-                            class="icon-button-dark"
-                        /><span class="section__body__button__text">
-                            Read more</span
-                        >
-                    </button>
+                    <a class="section__body__button--accent" href="#">
+                        <div class="section__body__button">
+                            <img
+                                src="./src/img/icon-read-more.png"
+                                alt=""
+                                width="20"
+                                height="20"
+                                class="button-dark__icon"
+                            /><span class="section__body__button__text">
+                                Read more</span
+                            >
+                        </div>
+                    </a>
                 </article>
             </section>
         </section>
         <section class="section projects" id="projects">
-            <header class="projects__nav">
-                <div class="projects__nav__container">
-                    <div class="projects__nav__container__project">
-                        <a
-                            class="card__footer__button--light"
-                            href="#projects__covid-19-dasboard"
-                        >
-                            <span class="card__footer__button__text"
-                                >COVID-19 Dashboard</span
-                            >
-                        </a>
-                    </div>
-                    <div class="projects__nav__container__project">
-                        <a
-                            class="card__footer__button--light"
-                            href="#projects__to-do-app"
-                        >
-                            <span class="card__footer__button__text"
-                                >To-Do app</span
-                            >
-                        </a>
-                    </div>
-                    <div class="projects__nav__container__project">
-                        <a class="card__footer__button--light" href="#projects">
-                            <span class="card__footer__button__text"
-                                >Project 3</span
-                            >
-                        </a>
-                    </div>
-                    <div class="projects__nav__container__project">
-                        <a class="card__footer__button--light" href="#projects">
-                            <span class="card__footer__button__text"
-                                >Project 4</span
-                            >
-                        </a>
-                    </div>
-                </div>
-            </header>
             <div class="section__header" id="projects__covid-19-dasboard">
                 <div class="section__header__text-container">
                     <h2 class="section__header__text-container__text">
@@ -318,32 +295,61 @@
                         class="section__body__highlight__preview-gif"
                     />
                     <div class="section__body__highlight__buttons">
-                        <button class="section__body__button">
+                        <a class="section__body__button">
                             <img
                                 src="./src/img/icon-github.png"
                                 alt=""
                                 width="20"
                                 height="20"
-                                class="icon-button-dark"
+                                class="button-dark__icon"
                             /><span class="section__body__button__text"
                                 >GitHub Repository</span
                             >
-                        </button>
-                        <button class="section__body__button">
+                        </a>
+                        <a class="section__body__button">
                             <img
                                 src="./src/img/icon-live.png"
                                 alt=""
                                 width="20"
                                 height="20"
-                                class="icon-button-dark"
+                                class="button-dark__icon"
                             /><span class="section__body__button__text"
                                 >See it live</span
                             >
-                        </button>
+                        </a>
                     </div>
                     <div class="dividing-line--horizontal--dark"></div>
-                    <div class="article--dark">
-                        <h3 class="article__title--dark">Technologies</h3>
+                    <aside class="article__aside">
+                        <header class="article__header">
+                            <div class="article__header__section">
+                                Technologies used to build it
+                            </div>
+                        </header>
+                        <div class="tech-icons-container">Icon 1, 2, 3...</div>
+                        <div class="article--text">
+                            <p>
+                                Consectetur adipiscing elit. Maecenas euismod,
+                                velit ac consequat maximus, erat lacus tincidunt
+                                magna, et laoreet felis magna sed urna.
+                                Vestibulum sed vestibulum libero, bibendum
+                                accumsan nisi. Duis mattis felis vitae
+                                pellentesque ultricies. Phasellus elementum
+                                feugiat metus vel fermentum. Aenean vitae nisl
+                                vel metus tincidunt rutrum. Nunc egestas, quam
+                                vitae porttitor lacinia, nisi purus pharetra
+                                ipsum, cursus iaculis neque massa vel dolor.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="section__body__description">
+                    <header class="article__header">
+                        <div class="article__header__section">Project</div>
+                        <h2 class="article__header__title">
+                            COVID-19 Dashboard
+                        </h2>
+                    </header>
+                    <div class="article--text">
                         <p>
                             Consectetur adipiscing elit. Maecenas euismod, velit
                             ac consequat maximus, erat lacus tincidunt magna, et
@@ -355,57 +361,48 @@
                             vitae porttitor lacinia, nisi purus pharetra ipsum,
                             cursus iaculis neque massa vel dolor.
                         </p>
-                    </div>
-                </div>
-                <div class="section__body__description article--dark">
-                    <h3 class="article__title--dark">COVID-19 Dashboard</h3>
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>
-                        Consectetur adipiscing elit. Maecenas euismod, velit ac
-                        consequat maximus, erat lacus tincidunt magna, et
-                        laoreet felis magna sed urna. Vestibulum sed vestibulum
-                        libero, bibendum accumsan nisi. Duis mattis felis vitae
-                        pellentesque ultricies. Phasellus elementum feugiat
-                        metus vel fermentum. Aenean vitae nisl vel metus
-                        tincidunt rutrum. Nunc egestas, quam vitae porttitor
-                        lacinia, nisi purus pharetra ipsum, cursus iaculis neque
-                        massa vel dolor.
-                    </p>
-                    <p>
-                        Aliquam erat volutpat. In sapien justo, vehicula at
-                        tortor a, maximus porta lorem. In hac habitasse platea
-                        dictumst. Donec mollis elit nulla, sed pulvinar purus
-                        eleifend vel. Maecenas iaculis nulla ac magna feugiat,
-                        et ultricies mi gravida. Lorem ipsum dolor sit amet Nam
-                        at nisl sollicitudin, laoreet neque sit amet, tempor
-                        lectus.
-                    </p>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>
+                            Aliquam erat volutpat. In sapien justo, vehicula at
+                            tortor a, maximus porta lorem. In hac habitasse
+                            platea dictumst. Donec mollis elit nulla, sed
+                            pulvinar purus eleifend vel. Maecenas iaculis nulla
+                            ac magna feugiat, et ultricies mi gravida. Lorem
+                            ipsum dolor sit amet Nam at nisl sollicitudin,
+                            laoreet neque sit amet, tempor lectus.
+                        </p>
 
-                    <h2>Curabitur eget risus vitae ante consequat commodo</h2>
-                    <p>
-                        Aliquam at faucibus leo, suscipit ultricies metus.
-                        Vivamus congue non nunc nec lacinia. In sed sollicitudin
-                        massa. Phasellus ipsum diam, ornare vel metus vitae,
-                        aliquet ornare nulla. Aliquam eleifend nunc ante, vel
-                        lacinia magna dignissim eu. Fusce in nisl nec augue
-                        volutpat dignissim sed vitae leo. Donec aliquam risus
-                        non eros viverra, ac consectetur diam ornare. Fusce ut
-                        efficitur lorem. Etiam efficitur sed mauris sit amet
-                        convallis. Nunc quis magna rhoncus, eleifend mauris eu,
-                        eleifend tellus. Ut congue purus sit amet metus
-                        sollicitudin, et fermentum leo imperdiet.
-                    </p>
-                    <button class="section__body__button">
-                        <img
-                            src="./src/img/icon-read-more.png"
-                            alt=""
-                            width="20"
-                            height="20"
-                            class="icon-button-dark"
-                        /><span class="section__body__button__text">
-                            Read more</span
-                        >
-                    </button>
+                        <h3>
+                            Curabitur eget risus vitae ante consequat commodo
+                        </h3>
+                        <p>
+                            Aliquam at faucibus leo, suscipit ultricies metus.
+                            Vivamus congue non nunc nec lacinia. In sed
+                            sollicitudin massa. Phasellus ipsum diam, ornare vel
+                            metus vitae, aliquet ornare nulla. Aliquam eleifend
+                            nunc ante, vel lacinia magna dignissim eu. Fusce in
+                            nisl nec augue volutpat dignissim sed vitae leo.
+                            Donec aliquam risus non eros viverra, ac consectetur
+                            diam ornare. Fusce ut efficitur lorem. Etiam
+                            efficitur sed mauris sit amet convallis. Nunc quis
+                            magna rhoncus, eleifend mauris eu, eleifend tellus.
+                            Ut congue purus sit amet metus sollicitudin, et
+                            fermentum leo imperdiet.
+                        </p>
+                    </div>
+                    <a class="section__body__button--accent" href="#">
+                        <div class="section__body__button">
+                            <img
+                                src="./src/img/icon-read-more.png"
+                                alt=""
+                                width="20"
+                                height="20"
+                                class="button-dark__icon"
+                            /><span class="section__body__button__text">
+                                Read more</span
+                            >
+                        </div>
+                    </a>
                 </div>
             </article>
             <div class="section__header" id="projects__to-do-app">
@@ -423,32 +420,59 @@
                         class="section__body__highlight__preview-gif"
                     />
                     <div class="section__body__highlight__buttons">
-                        <button class="section__body__button">
+                        <a class="section__body__button">
                             <img
                                 src="./src/img/icon-github.png"
                                 alt=""
                                 width="20"
                                 height="20"
-                                class="icon-button-dark"
+                                class="button-dark__icon"
                             /><span class="section__body__button__text"
                                 >GitHub Repository</span
                             >
-                        </button>
-                        <button class="section__body__button">
+                        </a>
+                        <a class="section__body__button">
                             <img
                                 src="./src/img/icon-live.png"
                                 alt=""
                                 width="20"
                                 height="20"
-                                class="icon-button-dark"
+                                class="button-dark__icon"
                             /><span class="section__body__button__text"
                                 >See it live</span
                             >
-                        </button>
+                        </a>
                     </div>
                     <div class="dividing-line--horizontal--dark"></div>
-                    <div class="article--dark">
-                        <h3 class="article__title--dark">Technologies</h3>
+                    <aside class="article__aside">
+                        <header class="article__header">
+                            <div class="article__header__section">
+                                Technologies used to build it
+                            </div>
+                        </header>
+                        <div class="tech-icons-container">Icon 1, 2, 3...</div>
+                        <div class="article--text">
+                            <p>
+                                Consectetur adipiscing elit. Maecenas euismod,
+                                velit ac consequat maximus, erat lacus tincidunt
+                                magna, et laoreet felis magna sed urna.
+                                Vestibulum sed vestibulum libero, bibendum
+                                accumsan nisi. Duis mattis felis vitae
+                                pellentesque ultricies. Phasellus elementum
+                                feugiat metus vel fermentum. Aenean vitae nisl
+                                vel metus tincidunt rutrum. Nunc egestas, quam
+                                vitae porttitor lacinia, nisi purus pharetra
+                                ipsum, cursus iaculis neque massa vel dolor.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="section__body__description">
+                    <header class="article__header">
+                        <div class="article__header__section">Project</div>
+                        <h2 class="article__header__title">To-Do app</h2>
+                    </header>
+                    <div class="article--text">
                         <p>
                             Consectetur adipiscing elit. Maecenas euismod, velit
                             ac consequat maximus, erat lacus tincidunt magna, et
@@ -460,60 +484,54 @@
                             vitae porttitor lacinia, nisi purus pharetra ipsum,
                             cursus iaculis neque massa vel dolor.
                         </p>
-                    </div>
-                </div>
-                <div class="section__body__description article--dark">
-                    <h3 class="article__title--dark">To-Do app</h3>
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>
-                        Consectetur adipiscing elit. Maecenas euismod, velit ac
-                        consequat maximus, erat lacus tincidunt magna, et
-                        laoreet felis magna sed urna. Vestibulum sed vestibulum
-                        libero, bibendum accumsan nisi. Duis mattis felis vitae
-                        pellentesque ultricies. Phasellus elementum feugiat
-                        metus vel fermentum. Aenean vitae nisl vel metus
-                        tincidunt rutrum. Nunc egestas, quam vitae porttitor
-                        lacinia, nisi purus pharetra ipsum, cursus iaculis neque
-                        massa vel dolor.
-                    </p>
-                    <p>
-                        Aliquam erat volutpat. In sapien justo, vehicula at
-                        tortor a, maximus porta lorem. In hac habitasse platea
-                        dictumst. Donec mollis elit nulla, sed pulvinar purus
-                        eleifend vel. Maecenas iaculis nulla ac magna feugiat,
-                        et ultricies mi gravida. Lorem ipsum dolor sit amet Nam
-                        at nisl sollicitudin, laoreet neque sit amet, tempor
-                        lectus.
-                    </p>
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>
+                            Aliquam erat volutpat. In sapien justo, vehicula at
+                            tortor a, maximus porta lorem. In hac habitasse
+                            platea dictumst. Donec mollis elit nulla, sed
+                            pulvinar purus eleifend vel. Maecenas iaculis nulla
+                            ac magna feugiat, et ultricies mi gravida. Lorem
+                            ipsum dolor sit amet Nam at nisl sollicitudin,
+                            laoreet neque sit amet, tempor lectus.
+                        </p>
 
-                    <h2>Curabitur eget risus vitae ante consequat commodo</h2>
-                    <p>
-                        Aliquam at faucibus leo, suscipit ultricies metus.
-                        Vivamus congue non nunc nec lacinia. In sed sollicitudin
-                        massa. Phasellus ipsum diam, ornare vel metus vitae,
-                        aliquet ornare nulla. Aliquam eleifend nunc ante, vel
-                        lacinia magna dignissim eu. Fusce in nisl nec augue
-                        volutpat dignissim sed vitae leo. Donec aliquam risus
-                        non eros viverra, ac consectetur diam ornare. Fusce ut
-                        efficitur lorem. Etiam efficitur sed mauris sit amet
-                        convallis. Nunc quis magna rhoncus, eleifend mauris eu,
-                        eleifend tellus. Ut congue purus sit amet metus
-                        sollicitudin, et fermentum leo imperdiet.
-                    </p>
-                    <button class="section__body__button">
-                        <img
-                            src="./src/img/icon-read-more.png"
-                            alt=""
-                            width="20"
-                            height="20"
-                            class="icon-button-dark"
-                        /><span class="section__body__button__text">
-                            Read more</span
-                        >
-                    </button>
+                        <h3>
+                            Curabitur eget risus vitae ante consequat commodo
+                        </h3>
+                        <p>
+                            Aliquam at faucibus leo, suscipit ultricies metus.
+                            Vivamus congue non nunc nec lacinia. In sed
+                            sollicitudin massa. Phasellus ipsum diam, ornare vel
+                            metus vitae, aliquet ornare nulla. Aliquam eleifend
+                            nunc ante, vel lacinia magna dignissim eu. Fusce in
+                            nisl nec augue volutpat dignissim sed vitae leo.
+                            Donec aliquam risus non eros viverra, ac consectetur
+                            diam ornare. Fusce ut efficitur lorem. Etiam
+                            efficitur sed mauris sit amet convallis. Nunc quis
+                            magna rhoncus, eleifend mauris eu, eleifend tellus.
+                            Ut congue purus sit amet metus sollicitudin, et
+                            fermentum leo imperdiet.
+                        </p>
+                    </div>
+                    <a class="section__body__button--accent" href="#">
+                        <div class="section__body__button">
+                            <img
+                                src="./src/img/icon-read-more.png"
+                                alt=""
+                                width="20"
+                                height="20"
+                                class="button-dark__icon"
+                            /><span class="section__body__button__text">
+                                Read more</span
+                            >
+                        </div>
+                    </a>
                 </div>
             </article>
         </section>
+
+        <!-- ////////// Section: Blog posts ////////// -->
+
         <section class="section blog-posts" id="blog-posts">
             <div class="section__header">
                 <div class="section__header__text-container">
@@ -523,19 +541,21 @@
                 </div>
             </div>
             <div class="section__body-container--vertical">
+                <!-- ////////// Cards: Blog posts ////////// -->
+
                 <div class="section__body__card-container">
-                    <div class="card__nav">
-                        <img src="./src/img/white-arrow.png" alt="Left" />
-                    </div>
                     <div class="card-group">
                         <article class="card">
-                            <header class="card__header">
-                                <h2 class="card__header__title">
+                            <header class="article__header--card">
+                                <div class="article__header__section">
+                                    Blog post
+                                </div>
+                                <h2 class="article__header__title">
                                     MVC and the Publish and Subscription desing
                                     pattern
                                 </h2>
                             </header>
-                            <div class="card__body">
+                            <div class="article--text--card">
                                 <p>
                                     Consectetur adipiscing elit. Maecenas
                                     euismod, velit ac consequat maximus, erat
@@ -550,88 +570,167 @@
                                     ipsum, cursus iaculis neque massa vel.
                                 </p>
                             </div>
-                            <div class="card__footer">
+                            <footer class="card__footer">
                                 <p class="card__footer__title">Read it on</p>
                                 <div class="card__footer__buttons-container">
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Dev.to</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Hashnode</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Medium</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Blog</span
-                                        >
-                                    </button>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Dev.to</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Hashnode</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Medium</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Blog</span
+                                            >
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
+                            </footer>
                         </article>
                         <article class="card">
-                            <header class="card__header">
-                                <h2 class="card__header__title">
-                                    MVC and the Publish and Subscription desing
-                                    pattern
+                            <header class="article__header--card">
+                                <div class="article__header__section">
+                                    Blog post
+                                </div>
+                                <h2 class="article__header__title">
+                                    Understanding the JavaScript engine
                                 </h2>
                             </header>
-                            <div class="card__body">
+                            <div class="article--text--card">
+                                <p>
+                                    Vestibulum sed vestibulum libero, bibendum
+                                    accumsan nisi. Duis mattis felis vitae
+                                    pellentesque ultricies. Phasellus elementum
+                                    feugiat metus vel fermentum. Aenean vitae
+                                    nisl vel metus tincidunt rutrum. Nunc
+                                    egestas, quam vitae porttitor lacinia, nisi
+                                    purus pharetra ipsum, cursus iaculis neque
+                                    massa vel.
+                                </p>
                                 <p>
                                     Consectetur adipiscing elit. Maecenas
                                     euismod, velit ac consequat maximus, erat
                                     lacus tincidunt magna, et laoreet felis
-                                    magna sed urna. Vestibulum sed vestibulum
-                                    libero, bibendum accumsan nisi. Duis mattis
-                                    felis vitae pellentesque ultricies.
-                                    Phasellus elementum feugiat metus vel
-                                    fermentum. Aenean vitae nisl vel metus
-                                    tincidunt rutrum. Nunc egestas, quam vitae
-                                    porttitor lacinia, nisi purus pharetra
-                                    ipsum, cursus iaculis neque massa vel.
+                                    magna sed urna.
                                 </p>
                             </div>
-                            <div class="card__footer">
+                            <footer class="card__footer">
                                 <p class="card__footer__title">Read it on</p>
                                 <div class="card__footer__buttons-container">
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Dev.to</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Hashnode</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Medium</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Blog</span
-                                        >
-                                    </button>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Dev.to</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Hashnode</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Medium</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Blog</span
+                                            >
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
+                            </footer>
                         </article>
                         <article class="card">
-                            <header class="card__header">
-                                <h2 class="card__header__title">
-                                    MVC and the Publish and Subscription desing
-                                    pattern
+                            <header class="article__header--card">
+                                <div class="article__header__section">
+                                    Blog post
+                                </div>
+                                <h2 class="article__header__title">
+                                    Consectetur adipiscing elit
                                 </h2>
                             </header>
-                            <div class="card__body">
+                            <div class="article--text--card">
                                 <p>
                                     Consectetur adipiscing elit. Maecenas
                                     euismod, velit ac consequat maximus, erat
@@ -641,58 +740,91 @@
                                     felis vitae pellentesque ultricies.
                                     Phasellus elementum feugiat metus vel
                                     fermentum. Aenean vitae nisl vel metus
-                                    tincidunt rutrum. Nunc egestas, quam vitae
-                                    porttitor lacinia, nisi purus pharetra
-                                    ipsum, cursus iaculis neque massa vel.
+                                    tincidunt rutrum. Nunc egestas.
                                 </p>
                             </div>
-                            <div class="card__footer">
+                            <footer class="card__footer">
                                 <p class="card__footer__title">Read it on</p>
                                 <div class="card__footer__buttons-container">
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Dev.to</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Hashnode</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Medium</span
-                                        >
-                                    </button>
-                                    <button class="card__footer__button">
-                                        <span class="card__footer__button__text"
-                                            >Blog</span
-                                        >
-                                    </button>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Dev.to</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Hashnode</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Medium</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="section__body__button--accent"
+                                        href="#"
+                                    >
+                                        <div class="section__body__button">
+                                            <span
+                                                class="
+                                                    section__body__button__text
+                                                "
+                                            >
+                                                Blog</span
+                                            >
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
+                            </footer>
                         </article>
-                    </div>
-                    <div class="card__nav">
-                        <img src="./src/img/white-arrow.png" alt="Right" />
                     </div>
                 </div>
 
+                <!-- ////////// Article: Why to blog? ////////// -->
+
                 <div class="dividing-line--horizontal--dark"></div>
                 <article class="section__body__description">
-                    <div class="move-left">
-                        <h2 class="article__header">Why to blog?</h2>
-                        <h3 class="article__header__title">
+                    <header class="article__header">
+                        <div class="article__header__section">Why to blog?</div>
+                        <h2 class="article__header__title">
                             The best way to learn is to teach
-                        </h3>
-                    </div>
-                    <div class="article--dark">
+                        </h2>
+                    </header>
+                    <div class="article--text">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Placeat voluptas recusandae at repudiandae
                             molestiae eius delectus fuga nobis tempora quaerat.
                         </p>
-                        <h2>Voluptatem explicabo nostrum mollitia</h2>
+                        <h3>Voluptatem explicabo nostrum mollitia</h3>
                         <p>
                             Ipsam numquam voluptatem quam ipsum! Voluptate
                             sapiente, voluptas accusamus itaque iste fugit porro
@@ -742,7 +874,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button-light">
+                        <a class="button-light">
                             <img
                                 src="./src/img/icon-resume.png"
                                 alt=""
@@ -752,7 +884,7 @@
                             /><span class="button-light__text"
                                 >Get my resume</span
                             >
-                        </button>
+                        </a>
                         <a
                             class="button-light"
                             href="https://www.linkedin.com/in/damian-demasi-5451378/"
@@ -882,7 +1014,7 @@
                             alt=""
                             width="20"
                             height="20"
-                            class="icon-button-dark"
+                            class="button-dark__icon"
                         /><span class="card__button__text"
                             >Read it on LinkedIn</span
                         >
@@ -930,7 +1062,7 @@
                             alt=""
                             width="20"
                             height="20"
-                            class="icon-button-dark"
+                            class="button-dark__icon"
                         /><span class="card__button__text"
                             >Read it on LinkedIn</span
                         >
@@ -980,7 +1112,7 @@
                             alt=""
                             width="20"
                             height="20"
-                            class="icon-button-dark"
+                            class="button-dark__icon"
                         /><span class="card__button__text"
                             >Read it on LinkedIn</span
                         >
@@ -1084,7 +1216,7 @@
                                     alt=""
                                     width="20"
                                     height="20"
-                                    class="icon-button-dark"
+                                    class="button-dark__icon"
                                 /><span class="section__body__button__text"
                                     >Send message</span
                                 >

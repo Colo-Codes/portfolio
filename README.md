@@ -25,7 +25,7 @@ Created by: Damian Demasi, August 2021
 
 #### Modifications to implement
 
--   Define a handful of styles and assign a clear purpose for each of them
+-   Define a handful of styles and assign a clear purpose for each of them (there is too much elements competing for the user's attention)
     -   Don't overuse gradients
     -   Make interactive parts of the site more prominent
     -   Unify title styles
