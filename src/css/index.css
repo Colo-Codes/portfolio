@@ -50,7 +50,9 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     font-family: var(--font-normal);
+    scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
@@ -617,6 +619,7 @@ body {
 
 .section__header__sub-header__title {
     font-size: 2rem;
+    margin: auto 1rem;
 }
 
 .section__header__text-container {
