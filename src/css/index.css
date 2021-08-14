@@ -21,8 +21,8 @@
     --gradient-linear: linear-gradient(
         to top right,
         #1a2a6c 0%,
-        #b21f1f 50%,
-        #fdbb2d 100%
+        #b21f1f 40%,
+        #fdbb2d 90%
     );
     --gradient-linear-2steps: linear-gradient(
         to top right,
@@ -153,10 +153,7 @@ body {
     z-index: 20;
     width: 100%;
     height: 8rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    overflow: hidden;
     border-top: 2px solid var(--color-accent);
     /* background: var(--gradient-linear-2steps); */
     background-color: rgba(0, 0, 0, 0.5);
@@ -166,12 +163,53 @@ body {
     transition: all 0.2s ease-in;
 }
 
+.sticky-nav-container {
+    max-width: 80rem;
+    max-height: 8rem;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+
 .nav__logos-container,
-.nav__links-container {
+.nav__links-container,
+.nav__bio-container {
     display: flex;
     margin: 0.5rem auto;
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
+}
+
+.nav__logos-container {
+    margin-left: 1rem;
+}
+
+.nav-image {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: -1rem;
+    border-radius: 50%;
+}
+
+.nav__bio__name-container {
+    position: relative;
+    left: 7rem;
+    color: var(--color-light);
+    text-transform: uppercase;
+    font-family: var(--font-highlights);
+}
+
+.nav__bio__name-container div:first-child {
+    letter-spacing: .1rem;
+}
+
+.nav__bio__name-container div:last-child {
+    font-size: .8rem;
+    letter-spacing: .17rem;
 }
 
 .nav__logo,
