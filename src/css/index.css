@@ -175,7 +175,6 @@ body {
     justify-content: space-around;
 }
 
-
 .nav__logos-container,
 .nav__links-container,
 .nav__bio-container {
@@ -185,9 +184,9 @@ body {
     /* margin-top: 2rem; */
 }
 
-.nav__logos-container {
+/* .nav__logos-container {
     margin-left: 1rem;
-}
+} */
 
 .nav-image {
     width: 6rem;
@@ -206,12 +205,12 @@ body {
 }
 
 .nav__bio__name-container div:first-child {
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }
 
 .nav__bio__name-container div:last-child {
-    font-size: .8rem;
-    letter-spacing: .17rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.17rem;
 }
 
 .nav__logo,
@@ -443,11 +442,10 @@ body {
 }
 
 .card .button--dark {
-    margin-top: auto;
+    padding: 0.5rem;
 }
 
 .button--dark,
-.card__button--dark,
 .card__button {
     color: var(--color-light);
     background: var(--color-accent);
@@ -492,8 +490,6 @@ body {
 
 .button--dark:hover,
 .button--dark:focus,
-.card__button--dark:hover,
-.card__button--dark:focus,
 .card__button:focus,
 .card__button:hover {
     box-shadow: 0 5px 0 0 var(--color-accent-background),
@@ -522,7 +518,6 @@ body {
 /* Active */
 
 .button--dark:active,
-.card__button--dark:active,
 .card__button:active {
     box-shadow: none;
     background: var(--color-accent-secondary);
@@ -701,7 +696,7 @@ body {
 
 .section__body__description {
     /* min-width: 20rem; */
-    max-width: 40rem;
+    max-width: 22rem;
     margin: 0 auto;
     padding: 1rem;
     background: var(--color-light);
@@ -738,7 +733,6 @@ body {
 
 .section__body__highlight__picture__image {
     border: 1px solid var(--color-accent);
-
 }
 
 .section__body__highlight__circle {
@@ -751,7 +745,7 @@ body {
 /* SECTION Cards */
 
 .card {
-    width: 23rem;
+    max-width: 21rem;
     /* height: 32rem; */
     display: flex;
     flex-direction: column;
@@ -1087,42 +1081,17 @@ body {
     }
 }
 
-/* Animation modified by Damian Demasi */
-
-/*
-@keyframes web-dev-down {
-    0% {
-        transform: translateY(-2rem);
-        transform-origin: 50% 50%;
-        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
-            0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
-            0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-    }
-    50% {
-        transform: translateY(-1rem);
-        transform-origin: 50% 50%;
-        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
-            0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
-            0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-    }
-} */
-
 /* SECTION Mobile first */
 
 @media (min-width: 500px) {
     .section__body__highlight__preview-gif {
         width: 25rem;
     }
-    /* .section__body__highlight__buttons-round-container-light {
-        width: 27rem;
-    }
-    .section__body__highlight__buttons-round-container-dark {
-        padding: 5rem 0 7rem 0;
-    } */
+    .section__body__description,
     .section__body__highlight,
     .section__body__highlight--transparent {
         /* padding: 0 2rem; */
-        width: 40rem;
+        max-width: 30rem;
     }
     .sticky-nav-reference {
         margin-top: -6rem;
@@ -1147,6 +1116,15 @@ body {
 @media (min-width: 650px) {
     .section__body__highlight__preview-gif {
         width: 36rem;
+    }
+    .section__body__description,
+    .section__body__highlight,
+    .section__body__highlight--transparent {
+        /* padding: 0 2rem; */
+        max-width: 40rem;
+    }
+    .nav__logos-container {
+        margin-left: 1rem;
     }
 }
 @media (min-width: 750px) {
@@ -1174,10 +1152,6 @@ body {
     .projects__nav__container__project {
         margin: 0 2rem;
     }
-    /* .move-up-margin {
-        margin-top: -5.625rem;
-    } */
-
     .sticky-nav-reference {
         margin-top: -4rem;
     }
@@ -1201,20 +1175,9 @@ body {
     .nav__logo {
         margin: 0 1rem;
     }
-    .section__body__highlight,
-    .section__body__highlight--transparent {
-        /* justify-content: space-between; */
-    }
-    .card-group {
-        /* min-width: 70rem; */
-        /* min-width: 100%; */
-    }
     .move-left {
         margin-left: -5rem;
     }
-    /* .section__header__sub-header {
-        margin: 5rem auto 0 auto;
-    } */
 }
 
 @media (min-width: 1285px) {
@@ -1227,5 +1190,4 @@ body {
     .hero__main-text {
         font-size: 9rem;
     }
-}
 }
