@@ -1107,53 +1107,9 @@
                             below.
                         </p>
                         <!-- Using Netlify to send form data -->
-
                         <form
-                            name="contact"
-                            method="POST"
-                            data-netlify="true"
-                            data-netlify-recaptcha="true"
-                        >
-                            <p>
-                                <label
-                                    >Your Name: <input type="text" name="name"
-                                /></label>
-                            </p>
-                            <p>
-                                <label
-                                    >Your Email:
-                                    <input type="email" name="email"
-                                /></label>
-                            </p>
-                            <p>
-                                <label
-                                    >Your Role:
-                                    <select name="role[]" multiple>
-                                        <option value="leader">Leader</option>
-                                        <option value="follower">
-                                            Follower
-                                        </option>
-                                    </select></label
-                                >
-                            </p>
-                            <p>
-                                <label
-                                    >Message:
-                                    <textarea name="message"></textarea>
-                                </label>
-                            </p>
-                            <div
-                                class="form__captcha"
-                                data-netlify-recaptcha="true"
-                            ></div>
-                            <p>
-                                <button type="submit">Send</button>
-                            </p>
-                        </form>
-
-                        <!-- <form
                             action="POST"
-                            method="POST"
+                            method="post"
                             id="message-form"
                             data-netlify="true"
                         >
@@ -1163,7 +1119,6 @@
                                 id="name"
                                 name="name"
                                 placeholder="Your name"
-                                required
                             />
                             <input
                                 class="form__input"
@@ -1171,7 +1126,6 @@
                                 id="email"
                                 name="email"
                                 placeholder="Your email"
-                                required
                             />
                             <textarea
                                 class="form__textarea"
@@ -1180,10 +1134,8 @@
                                 rows="10"
                                 cols="50"
                                 placeholder="Your message"
-                                required
-                            ></textarea> -->
-                        <!-- Netlify spam filter -->
-                        <!-- <div
+                            ></textarea>
+                            <div
                                 class="form__captcha"
                                 data-netlify-recaptcha="true"
                             ></div>
@@ -1203,7 +1155,7 @@
                                     >Send message</span
                                 >
                             </button>
-                        </form> -->
+                        </form>
                     </div>
                 </section>
             </article>
