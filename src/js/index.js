@@ -52,7 +52,9 @@ sectionActiveObserver.observe(sectionContact);
 const form = document.getElementById("message-form");
 const successMessage = document.querySelector('.form__success-message');
 
-function showSuccessMessage() {
+form.addEventListener("submit", function (e) {
+    // e.preventDefault();
+
     const hidden = successMessage.classList.contains('hidden');
     if (hidden) {
         successMessage.classList.remove('hidden');
@@ -63,6 +65,4 @@ function showSuccessMessage() {
         successMessage.classList.add('hidden');
     }
 
-}
-
-form.addEventListener("submit", showSuccessMessage);
+});
