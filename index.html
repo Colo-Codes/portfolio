@@ -1106,7 +1106,13 @@
                             LinkedIn, or, if you prefer, use the contact form
                             below.
                         </p>
-                        <form action="#" method="get" id="message-form">
+                        <!-- Using Netlify to send form data -->
+                        <form
+                            action="POST"
+                            method="post"
+                            id="message-form"
+                            data-netlify="true"
+                        >
                             <input
                                 class="form__input"
                                 type="text"
@@ -1129,6 +1135,7 @@
                                 cols="50"
                                 placeholder="Your message"
                             ></textarea>
+                            <div data-netlify-recaptcha="true"></div>
                             <button
                                 class="button--dark"
                                 type="submit"
