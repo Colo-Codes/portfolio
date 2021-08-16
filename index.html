@@ -1108,7 +1108,6 @@
                         </p>
                         <!-- Using Netlify to send form data -->
                         <form
-                            action="#"
                             method="POST"
                             name="message-form"
                             id="message-form"
@@ -1141,7 +1140,6 @@
                                 placeholder="Your message"
                                 required
                             ></textarea>
-                            <div data-netlify-recaptcha="true"></div>
                             <button
                                 class="button--dark"
                                 type="submit"
@@ -1159,6 +1157,9 @@
                                 >
                             </button>
                         </form>
+                        <div class="form__success-message hidden">
+                            Message submitted successfully. <br />Thank you!
+                        </div>
                     </div>
                 </section>
             </article>

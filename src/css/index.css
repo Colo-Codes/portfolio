@@ -863,12 +863,20 @@ body {
     margin-top: 2rem;
 }
 
-.form__captcha {
+.form__success-message {
+    position: absolute;
     display: block;
-    margin: 1rem auto;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    max-width: 20rem;
+    font-size: 1rem;
+    font-weight: 700;
+    top: 40%;
+    left: calc(50% - 10rem);
+    background: var(--color-accent-background);
+    color: var(--color-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px 10px var(--background-darker-transparent);
+    transition: all 0.2s;
 }
 
 /* SECTION Tweaks and decoration */

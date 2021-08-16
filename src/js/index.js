@@ -50,9 +50,19 @@ sectionActiveObserver.observe(sectionContact);
 // SECTION Form
 
 const form = document.getElementById("message-form");
+const successMessage = document.querySelector('.form__success-message');
 
 function showSuccessMessage() {
-    alert("The form was submitted");
+    const hidden = successMessage.classList.contains('hidden');
+    if (hidden) {
+        successMessage.classList.remove('hidden');
+        setTimeout(() => {
+            successMessage.classList.add('hidden');
+        }, 3000);
+    } else {
+        successMessage.classList.add('hidden');
+    }
+
 }
 
 addEventListener("submit", showSuccessMessage);
