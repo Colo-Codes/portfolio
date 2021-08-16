@@ -49,20 +49,28 @@ sectionActiveObserver.observe(sectionContact);
 
 // SECTION Form
 
-const form = document.getElementById("message-form");
+const myForm = document.getElementById("message-form");
 const successMessage = document.querySelector('.form__success-message');
 
-form.addEventListener("submit", function (e) {
-    // e.preventDefault();
+myForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const hidden = successMessage.classList.contains('hidden');
-    if (hidden) {
-        successMessage.classList.remove('hidden');
-        setTimeout(() => {
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+    }).then(() => {
+        const hidden = successMessage.classList.contains('hidden');
+        if (hidden) {
+            successMessage.classList.remove('hidden');
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 3000);
+        } else {
             successMessage.classList.add('hidden');
-        }, 3000);
-    } else {
-        successMessage.classList.add('hidden');
-    }
-
+        }
+    }).catch((error) =>
+        console.error(error));
 });
