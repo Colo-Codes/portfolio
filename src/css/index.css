@@ -858,6 +858,10 @@ body {
     margin-top: 2rem;
 }
 
+.form__captcha {
+    margin: auto;
+}
+
 /* SECTION Tweaks and decoration */
 
 .sticky-nav-reference {
