@@ -62,7 +62,15 @@ myForm.addEventListener("submit", function (e) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString()
     }).then(() => {
+        const myName = document.getElementById('name');
+        const myEmail = document.getElementById('email');
+        const myMessage = document.getElementById('message');
         const hidden = successMessage.classList.contains('hidden');
+
+        myName.value = '';
+        myEmail.value = '';
+        myMessage.value = '';
+
         if (hidden) {
             successMessage.classList.remove('hidden');
             setTimeout(() => {
