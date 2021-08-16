@@ -46,3 +46,13 @@ sectionActiveObserver.observe(sectionProjects);
 sectionActiveObserver.observe(sectionBlogPosts);
 sectionActiveObserver.observe(sectionAbout);
 sectionActiveObserver.observe(sectionContact);
+
+// SECTION Form
+
+const form = document.getElementById("message-form");
+
+function showSuccessMessage() {
+    alert("The form was submitted");
+}
+
+addEventListener("submit", showSuccessMessage);
