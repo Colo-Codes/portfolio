@@ -836,6 +836,11 @@ body {
 
 /* SECTION Form */
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .form__input,
 .form__textarea {
     font-family: var(--font-normal);
@@ -859,7 +864,11 @@ body {
 }
 
 .form__captcha {
-    margin: auto;
+    display: block;
+    margin: 1rem auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 /* SECTION Tweaks and decoration */
