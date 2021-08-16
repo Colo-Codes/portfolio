@@ -1108,51 +1108,26 @@
                         </p>
                         <!-- Using Netlify to send form data -->
                         <form
-                            action="success"
+                            name="contact"
                             method="POST"
-                            id="message-form"
                             data-netlify-recaptcha="true"
                             data-netlify="true"
                         >
-                            <input
-                                class="form__input"
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="Your name"
-                            />
-                            <input
-                                class="form__input"
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Your email"
-                            />
-                            <textarea
-                                class="form__textarea"
-                                id="message"
-                                name="message"
-                                rows="10"
-                                cols="50"
-                                placeholder="Your message"
-                            ></textarea>
+                            <p>
+                                <label
+                                    >Email: <input type="text" name="name"
+                                /></label>
+                            </p>
+                            <p>
+                                <label
+                                    >Message:
+                                    <textarea name="message"></textarea>
+                                </label>
+                            </p>
                             <div data-netlify-recaptcha="true"></div>
-                            <button
-                                class="button--dark"
-                                type="submit"
-                                form="message-form"
-                                value="Submit"
-                            >
-                                <img
-                                    src="./src/img/icon-send.png"
-                                    alt=""
-                                    width="20"
-                                    height="20"
-                                    class="button-dark__icon"
-                                /><span class="section__body__button__text"
-                                    >Send message</span
-                                >
-                            </button>
+                            <p>
+                                <button type="submit">Send</button>
+                            </p>
                         </form>
                     </div>
                 </section>
