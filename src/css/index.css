@@ -15,6 +15,9 @@
     --color-accent-background: #fdbb2d;
     --color-dark: #000;
     --color-article-text: #7a7a7a;
+    --color-success: #155724;
+    --color-success-background: #d4edda;
+    --color-success-border: #c3e6c8;
 
     --transparency-light: rgba(255, 255, 255, 0.2);
 
@@ -868,27 +871,27 @@ body {
     display: block;
     max-width: 20rem;
     font-size: 1rem;
-    font-weight: 700;
     top: 40%;
     left: calc(50% - 10rem);
-    background: var(--color-accent-background);
-    color: var(--color-light);
+    background-color: var(--color-success-background);
+    color: var(--color-success);
     padding: 2rem;
+    border: 2px solid var(--color-success-border);
     border-radius: 10px;
-    box-shadow: 0 10px 15px 10px var(--background-darker-transparent);
+    box-shadow: 0 10px 15px 5px var(--background-darker-transparent);
     transition: all 0.2s;
 }
 
 /* SECTION Tweaks and decoration */
 
 .sticky-nav-reference {
-    margin-top: -4rem;
+    margin-top: -2px;
 }
 
 .hidden {
-    position: relative;
     opacity: 0;
-    /* margin-top: -8rem; */
+    overflow: hidden;
+    height: 0;
     z-index: 0;
 }
 
