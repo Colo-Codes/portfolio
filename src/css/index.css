@@ -607,13 +607,17 @@ body {
 }
 
 .section__body__description {
-    /* min-width: 20rem; */
     max-width: 22rem;
     margin: 0 auto;
     padding: 1rem;
     border-radius: 5px;
-    /* background: var(--color-light); */
-    background: var(--gradient-linear--light);
+    /* background: var(--gradient-linear--light); */
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 20%,
+        rgba(255, 255, 255, 0) 50%
+    );
 }
 
 .section__body__background {
@@ -1022,7 +1026,6 @@ body {
     .section__body__description,
     .section__body__highlight,
     .section__body__highlight--transparent {
-        /* padding: 0 2rem; */
         max-width: 40rem;
     }
 }
