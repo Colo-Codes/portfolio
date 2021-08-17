@@ -805,7 +805,7 @@ body {
     max-width: 20rem;
     font-size: 1rem;
     top: 40%;
-    left: calc(50% - 10rem);
+    left: calc(50% - 9.45rem);
     background-color: var(--color-success-background);
     color: var(--color-success);
     padding: 2rem;
