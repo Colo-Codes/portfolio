@@ -34,13 +34,12 @@ const sectionActiveObserver = new IntersectionObserver(function (entries) {
         if (entry.isIntersecting) {
             // Show active class
             linkToActivate.classList.add('sticky-nav__link--active');
-        }
-        else {
+        } else {
             // Hide active class
             linkToActivate.classList.remove('sticky-nav__link--active');
         }
     });
-}, { rootMargin: "-100% 0px 0px 0px" });
+}, { rootMargin: '-100% 0px 0px 0px' });
 
 sectionActiveObserver.observe(sectionProjects);
 sectionActiveObserver.observe(sectionBlogPosts);
@@ -49,17 +48,17 @@ sectionActiveObserver.observe(sectionContact);
 
 // SECTION Form
 
-const myForm = document.getElementById("message-form");
+const myForm = document.getElementById('message-form');
 const successMessage = document.querySelector('.form__success-message');
 
-myForm.addEventListener("submit", function (e) {
+myForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const formData = new FormData(myForm);
 
     fetch('/', {
         method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
     }).then(() => {
         const myName = document.getElementById('name');

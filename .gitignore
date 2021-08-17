@@ -1,2 +1,7 @@
 .history
 .DS_store
+node_modules
+.stylelintrc.json
+package-lock.json
+package.json
+.eslintrc.js
