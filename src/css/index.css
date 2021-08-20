@@ -362,6 +362,11 @@ body {
     line-height: 1.4rem;
 }
 
+.article--text p,
+.article--text--card p {
+    margin-bottom: 1rem;
+}
+
 .article--text--card {
     margin: 1rem;
 }
